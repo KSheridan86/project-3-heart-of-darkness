@@ -595,3 +595,41 @@ def another_drink():
                          narrative.LEAVE_BAR_AFTER_DRINK,
                          visit_office
                          )
+
+
+##############################################################################
+# Chapter 3
+
+
+def chapter_three():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.CHAPTER_THREE)
+    choose_your_path('Press Enter to talk to Ishmel.\n',
+                     '',
+                     '',
+                     'Invalid choice, You must talk to Ishmel.',
+                     join_ishmel,
+                     join_ishmel
+                     )
+
+
+def join_ishmel():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    print(Fore.LIGHTRED_EX + ascii_art.BOAT)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.TALK_TO_ISHMEL)
+    choose_your_path('Do you Fish? (Y/N)\n',
+                     'y',
+                     'n',
+                     'Invalid choice, Do you Fish?',
+                     go_fish,
+                     sleep
+                     )
+
+
