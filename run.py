@@ -301,3 +301,60 @@ intro_text = f"""
         the station master of what has happened...
 
         """
+
+# Chapter 1
+# Chapter 1 Fork 1
+
+def volunteer():
+    '''
+    Runs the volunteer selection
+    '''
+    clear_terminal()
+    print(Fore.GREEN + ascii_art.JUNGLE)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.VOLUNTEER)
+    choose_your_path('Do you get Angry or stay Calm? (A/C)\n',
+                     'a',
+                     'c',
+                     'Invalid choice, please choose...',
+                     pass_functions_into_choices,
+                     dont_fight_sven,
+                     narrative.FIGHT_SVEN,
+                     game_over
+                     )
+
+
+def dont_fight_sven():
+    '''
+    placeholder
+    '''
+    clear_terminal()
+    txt_effect(narrative.DONT_FIGHT)
+    choose_your_path('Do you drink the Water or the Bourbon? (W/B)\n',
+                     'w',
+                     'b',
+                     'Invalid choice, please choose a drink.',
+                     pass_functions_into_choices,
+                     drink_bourbon,
+                     narrative.WATER,
+                     game_over
+                     )
+
+
+# Chapter 1 Fork 1.1
+
+
+def drink_bourbon():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.BOURBON)
+    choose_your_path('Press Enter to start Act two.\n',
+                     '',
+                     '',
+                     'Invalid choice, press Enter.',
+                     chapter_two,
+                     chapter_two
+                     )
+
