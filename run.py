@@ -72,3 +72,47 @@ def russian_roulette():
             pull_trigger()
 
     pull_trigger()
+
+
+def fish_game():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    print(Fore.BLUE + ascii_art.FISH)
+    narrative.GO_FISHING = True
+    print(Style.RESET_ALL)
+    num = random.randrange(1, 100)
+
+    def start_fish(num):
+        if num == 1:
+            return True
+        else:
+            for i in range(2, num):
+                if num % i == 0:
+                    return False
+        return True
+
+    answer = start_fish(num)
+
+    if answer:
+        narrative.FISH_CAUGHT += 1
+        print('You caught a Fish!!\n')
+        print(f"You now have {narrative.FISH_CAUGHT} fish in your bucket.\n")
+        choose_your_path('Keep Fishing? (Y/N)\n',
+                         'y',
+                         'n',
+                         'Invalid choice, Keep Fishing?',
+                         fish_game,
+                         sleep
+                         )
+    else:
+        print('No luck, try again?\n')
+        print(f"You have caught {narrative.FISH_CAUGHT} fish.\n")
+        choose_your_path('Keep trying? (Y/N)\n',
+                         'y',
+                         'n',
+                         'Invalid choice, Keep trying?',
+                         fish_game,
+                         sleep
+                         )
