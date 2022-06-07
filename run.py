@@ -393,3 +393,23 @@ def escape_boat():
                      chapter_two,
                      chapter_two
                      )
+
+
+##############################################################################
+# Chapter 2
+
+
+def chapter_two():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.CHAPTER_TWO)
+    choose_your_path('Do you go to the Bar? or the port Offices? (O/B)\n',
+                     'o',
+                     'b',
+                     'Invalid choice, please choose a destination.',
+                     enter_office,
+                     visit_bar
+                     )
+
