@@ -651,3 +651,22 @@ def go_fish():
                      fish_game,
                      fish_game
                      )
+
+
+# Chapter 3
+# Fork 2
+
+
+def sleep():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.REFUSE_FISHING)
+    choose_your_path('Press Enter to go speak with the men.\n',
+                     '',
+                     '',
+                     'Invalid choice, You must speak to these men.',
+                     river_discovery,
+                     river_discovery
+                     )
