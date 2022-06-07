@@ -273,4 +273,31 @@ def begin_game():
     else:
         print("This is not a valid selection....Try again.")
         begin_game()
-        
+
+
+# Start story
+
+print(Fore.LIGHTYELLOW_EX)
+print(ascii_art.TITLE)
+print(Fore.GREEN + Style.BRIGHT)
+txt_effect(narrative.INTRO)
+print(Style.RESET_ALL)
+print()
+time.sleep(.5)
+name = input('Please enter your name to continue....\n').capitalize()
+while not name or len(name) > 50:
+    name = input('''Ooops too long, Max of 50 characters...\n
+Please enter your name to continue....\n''').capitalize()
+
+
+intro_text = f"""
+        Act 1\n
+        The year was 1902 and the steamboat I was travelling on had
+        blown an engine. Miles from the town we had left yesterday and
+        half a world from home.\n
+        This damn river was trying to kill me....\n
+        {name} a voice called, it was the Captain.
+        The radio is busted. We need 2 volunteers to go and alert
+        the station master of what has happened...
+
+        """
