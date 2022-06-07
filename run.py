@@ -803,3 +803,83 @@ def wait_on_mechanics():
                      decide_to_leave,
                      arrive_plantation_mechanics
                      )
+
+
+# Fork  2.1
+
+
+def decide_to_leave():
+    '''
+    placeholder docstring
+    '''
+    txt_effect(narrative.DECIDE_TO_LEAVE_1)
+    print(Fore.RED)
+    txt_effect(narrative.DECIDE_TO_LEAVE_2)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.DECIDE_TO_LEAVE_2)
+    choose_your_path('Press Enter to go to the town.\n',
+                     '',
+                     '',
+                     'Invalid choice, Press Enter.',
+                     leave_africa,
+                     leave_africa
+                     )
+
+
+def leave_africa():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(narrative.LEAVE_AFRICA)
+    print(Fore.GREEN)
+    txt_effect(narrative.OUTRO_QUOTE)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.END)
+    choose_your_path('View the Menu or quit game? (M/Q)\n',
+                     'm',
+                     'q',
+                     'Invalid choice, Please choose.',
+                     menu,
+                     game_over_alive
+                     )
+
+# Fork 1.2 & Fork 2.2
+
+
+def arrive_plantation():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(narrative.ARRIVE_PLANTATION)
+    print(Fore.GREEN)
+    txt_effect(narrative.OUTRO_QUOTE)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.END)
+    choose_your_path('View the Menu or quit game? (M/Q)\n',
+                     'm',
+                     'q',
+                     'Invalid choice, Please choose.',
+                     menu,
+                     game_over_alive
+                     )
+
+
+def arrive_plantation_mechanics():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(narrative.ARRIVE_PLANTATION_MECHANICS)
+    print(Fore.GREEN)
+    txt_effect(narrative.OUTRO_QUOTE)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.END)
+    choose_your_path('View the Menu or quit game? (M/Q)\n',
+                     'm',
+                     'q',
+                     'Invalid choice, Please choose.',
+                     menu,
+                     game_over_alive
+                     )
