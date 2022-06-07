@@ -160,3 +160,31 @@ def pass_functions_into_choices(text, function):
     clear_terminal()
     txt_effect(f"{text}")
     function()
+
+
+def menu():
+    '''
+    Calls the main menu after you have died once during the game.
+    lets the user play the game from any point forward.
+    '''
+    clear_terminal()
+    print(Style.RESET_ALL)
+    print(narrative.MENU)
+    option = input('')
+    str(option)
+    if option == '1':
+        clear_terminal()
+        txt_effect(intro_text)
+        choose_your_path('Volunteer or Stay with the boat? [V/S]\n',
+                         'v',
+                         's',
+                         "This is not a valid selection....Try again.",
+                         volunteer,
+                         stay_with_boat
+                         )
+    elif option == '2':
+        chapter_two()
+    elif option == '3':
+        chapter_three()
+    else:
+        menu()
