@@ -10,7 +10,6 @@ import time
 import random
 import sys
 import os
-# import colorama
 from colorama import init
 from colorama import Fore, Style
 import narrative
@@ -183,9 +182,9 @@ def menu():
                          stay_with_boat
                          )
     elif option == '2':
-        chapter_two()
+        act_two()
     elif option == '3':
-        chapter_three()
+        act_three()
     else:
         menu()
 
@@ -303,8 +302,8 @@ intro_text = f"""
         """
 
 
-# Chapter 1
-# Chapter 1 Fork 1
+# Act 1
+# Act 1 Fork 1
 
 
 def volunteer():
@@ -343,7 +342,7 @@ def dont_fight_sven():
                      )
 
 
-# Chapter 1 Fork 1.1
+# Act 1 Fork 1.1
 
 
 def drink_bourbon():
@@ -356,11 +355,11 @@ def drink_bourbon():
                      '',
                      '',
                      'Invalid choice, press Enter.',
-                     chapter_two,
-                     chapter_two
+                     act_two,
+                     act_two
                      )
 
-# Chapter 1 Fork 2
+# Act 1 Fork 2
 
 
 def stay_with_boat():
@@ -379,7 +378,7 @@ def stay_with_boat():
                      game_over
                      )
 
-# Chapter 1 Fork 2.1
+# Act 1 Fork 2.1
 
 
 def escape_boat():
@@ -392,21 +391,21 @@ def escape_boat():
                      '',
                      '',
                      'Invalid choice, press Enter.',
-                     chapter_two,
-                     chapter_two
+                     act_two,
+                     act_two
                      )
 
 
 ##############################################################################
-# Chapter 2
+# Act 2
 
 
-def chapter_two():
+def act_two():
     """
     Placeholder docstring to remove errors
     """
     clear_terminal()
-    txt_effect(narrative.CHAPTER_TWO)
+    txt_effect(narrative.ACT_TWO)
     choose_your_path('Do you go to the Bar? or the port Offices? (O/B)\n',
                      'o',
                      'b',
@@ -450,8 +449,8 @@ def make_report():
                      '',
                      '',
                      'Invalid choice, press Enter.',
-                     chapter_three,
-                     chapter_three
+                     act_three,
+                     act_three
                      )
 
 
@@ -470,7 +469,7 @@ def enter_office():
                      )
 
 
-#  Chapter 2 Fork 2
+#  Act 2 Fork 2
 
 
 def visit_bar():
@@ -504,7 +503,7 @@ def refuse_drink_visit_office():
                      make_report
                      )
 
-# Chapter 2 Fork 2.1 (Russian roulette)
+# Act 2 Fork 2.1 (Russian roulette)
 
 
 def enter_room():
@@ -553,7 +552,7 @@ def survive_game_enter_office():
                      make_report
                      )
 
-# Chapter 2 Fork 2.2
+# Act 2 Fork 2.2
 
 
 def drink():
@@ -600,15 +599,15 @@ def another_drink():
 
 
 ##############################################################################
-# Chapter 3
+# Act 3
 
 
-def chapter_three():
+def act_three():
     """
     Placeholder docstring to remove errors
     """
     clear_terminal()
-    txt_effect(narrative.CHAPTER_THREE)
+    txt_effect(narrative.ACT_THREE)
     choose_your_path('Press Enter to talk to Ishmel.\n',
                      '',
                      '',
@@ -635,7 +634,7 @@ def join_ishmel():
                      )
 
 
-# Chapter three
+# Act three
 # Fork 1
 
 def go_fish():
@@ -655,7 +654,7 @@ def go_fish():
                      )
 
 
-# Chapter 3
+# Act 3
 # Fork 2
 
 
@@ -674,7 +673,7 @@ def sleep():
                      )
 
 
-# Chapter three
+# Act three
 # Fork 1 & 2 lead here so from here out i will refer to
 # the forks as 1 or 2 and disregard the first fork
 

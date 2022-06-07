@@ -148,9 +148,9 @@ STAY_ON_BOAT = """
         ############################################
     """
 
-# Chapter 2
+# Act 2
 
-CHAPTER_TWO = """
+ACT_TWO = """
         Act 2\n
         Another night spent in this opressive place with no sleep but finally
         you enter a clearing and up ahead you can see the backs of buildings.\n
@@ -319,9 +319,9 @@ TALK_TO_GIRL_4 = '''
 
 '''
 
-# Chapter 3
+# Act 3
 
-CHAPTER_THREE = '''
+ACT_THREE = '''
         Act 3
 
         Back out into the furnace you go. Your clothes now so soaked
