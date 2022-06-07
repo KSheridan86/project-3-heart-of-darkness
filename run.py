@@ -188,3 +188,23 @@ def menu():
         chapter_three()
     else:
         menu()
+
+
+def txt_effect(text_to_print):
+    '''
+    This prints all of the text slowly.
+    # '''
+    # for character in text_to_print:
+    #     sys.stdout.write(character)
+    #     sys.stdout.flush()
+    #     time.sleep(0.001)
+    print(text_to_print)
+
+
+def clear_terminal():
+    '''
+    Call this function to clear
+    the terminal of the last section.
+    '''
+    print(Style.RESET_ALL)
+    os.system('cls' if os.name == 'nt' else 'clear')
