@@ -208,3 +208,43 @@ def clear_terminal():
     '''
     print(Style.RESET_ALL)
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def game_over():
+    '''
+    Prints a game over graphic
+    '''
+    time.sleep(2)
+    clear_terminal()
+    print(Fore.RED + ascii_art.GAME_OVER)
+    choose_your_path('Would you like to play again? [Y/N]\n',
+                     'y',
+                     'n',
+                     "This is not a valid selection....Try again.",
+                     menu,
+                     end_story
+                     )
+
+
+def game_over_alive():
+    '''
+    Prints a game over graphic
+    '''
+    clear_terminal()
+    print(Fore.BLUE + ascii_art.GAME_OVER_ALIVE)
+    choose_your_path('Would you like to play again? [Y/N]\n',
+                     'y',
+                     'n',
+                     "This is not a valid selection....Try again.",
+                     menu,
+                     end_story
+                     )
+
+
+def end_story():
+    '''
+    Ends the game.
+    '''
+    print(Style.RESET_ALL)
+    print('Thanks for playing, come back soon.')
+    
