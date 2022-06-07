@@ -116,3 +116,47 @@ def fish_game():
                          fish_game,
                          sleep
                          )
+
+
+# Function used throughout the story
+
+
+def choose_your_path(choice,
+                     option_1,
+                     option_2,
+                     error,
+                     function_1,
+                     function_2,
+                     *args
+                     ):
+    '''
+    Function used throughout the game to
+    direct the story depending on your choice.
+    '''
+    choice = input(Fore.YELLOW + choice).lower()
+    if choice == option_1:
+        function_1(*args)
+    elif choice == option_2:
+        function_2()
+    else:
+        print(Fore.YELLOW + error)
+        choose_your_path(choice,
+                         option_1,
+                         option_2,
+                         error,
+                         function_1,
+                         function_2,
+                         *args)
+    print(Style.RESET_ALL)
+
+
+def pass_functions_into_choices(text, function):
+    '''
+    Starts the game.
+    Streamlines the process of calling the choose_your_path
+    function, you can pass arguments instead of having to write
+    individual functions to pass in for every fork in the path.
+    '''
+    clear_terminal()
+    txt_effect(f"{text}")
+    function()
