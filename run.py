@@ -670,3 +670,136 @@ def sleep():
                      river_discovery,
                      river_discovery
                      )
+
+
+# Chapter three
+# Fork 1 & 2 lead here so from here out i will refer to
+# the forks as 1 or 2 and disregard the first fork
+
+
+def river_discovery():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(f'       Standing on the deck are two men dressed in mechanics overalls.')
+    print(Fore.RED)
+    txt_effect(narrative.PLANTATION_MECHANICS_1)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.PLANTATION_MECHANICS_2)
+    print(Fore.RED)
+    txt_effect(narrative.PLANTATION_MECHANICS_3)
+    print(Style.RESET_ALL)
+    choose_your_path('Go with the men? or Stay with Ishmel? (G/S)\n',
+                     'g',
+                     's',
+                     'Invalid choice, Please choose.',
+                     go_with_men,
+                     stay_with_ishmel
+                     )
+
+# Fork 1
+
+
+def stay_with_ishmel():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(narrative.PLANTATION_WITH_ISHMEL)
+    choose_your_path('Press Enter to tie off the boat.\n',
+                     '',
+                     '',
+                     'Invalid choice, Press Enter.',
+                     arrive_plantation,
+                     arrive_plantation
+                     )
+
+
+# Fork 2
+
+
+def go_with_men():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    if narrative.GO_FISHING:
+        if narrative.FISH_CAUGHT >= 1:
+            txt_effect(f"""
+        'Of course, I'm very curious to find out what happened on that boat.'
+
+        You jump across onto the mens boat and Ishmel tosses a small parcel
+        over to you, it contains {narrative.FISH_CAUGHT} fish.
+
+        'Your catch, you boys will need to eat, see you around {name}.
+        And be careful, it's a jungle out there.'
+
+        he then proceeds to laugh hysterically.
+        """)
+            txt_effect(narrative.FIND_BOAT)
+            choose_your_path('Board the boat or Wait here? (B/W)\n',
+                             'b',
+                             'w',
+                             'Invalid choice, Please choose.',
+                             board_boat,
+                             wait_on_mechanics
+                             )
+        else:
+            txt_effect(narrative.OLD_BOAT)
+            txt_effect(narrative.FIND_BOAT)
+            choose_your_path('Board the boat or Wait here? (B/W)\n',
+                             'b',
+                             'w',
+                             'Invalid choice, Please choose.',
+                             board_boat,
+                             wait_on_mechanics
+                             )
+    else:
+        txt_effect(narrative.OLD_BOAT)
+        txt_effect(narrative.FIND_BOAT)
+        choose_your_path('Board the boat or Wait here? (B/W)\n',
+                         'b',
+                         'w',
+                         'Invalid choice, Please choose.',
+                         board_boat,
+                         wait_on_mechanics
+                         )
+
+
+def board_boat():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(narrative.BOARD_BOAT)
+    print(Fore.RED)
+    txt_effect(narrative.BOARD_BOAT_2)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.BOARD_BOAT_3)
+    choose_your_path('Leave Africa and go home or Continue? (L/C)\n',
+                     'l',
+                     'c',
+                     'Invalid choice, Please choose.',
+                     leave_africa,
+                     arrive_plantation
+                     )
+
+
+def wait_on_mechanics():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(narrative.WAIT_ON_MECHANICS_1)
+    print(Fore.RED)
+    txt_effect(narrative.WAIT_ON_MECHANICS_2)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.BOARD_BOAT_3)
+    choose_your_path('Leave Africa and go home or Continue? (L/C)\n',
+                     'l',
+                     'c',
+                     'Invalid choice, Please choose.',
+                     decide_to_leave,
+                     arrive_plantation_mechanics
+                     )
