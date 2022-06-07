@@ -413,3 +413,56 @@ def chapter_two():
                      visit_bar
                      )
 
+#  Chapter 2 Fork 1
+
+
+def visit_office():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.LEAVE_BAR_AFTER_DRINK)
+    txt_effect(narrative.PORT_OFFICE)
+    choose_your_path('Press Enter to talk to the girl.\n',
+                     '',
+                     '',
+                     'Invalid choice, please report what has happened.',
+                     make_report,
+                     make_report
+                     )
+
+
+def make_report():
+    '''
+    placeholder docstring
+    '''
+    clear_terminal()
+    txt_effect(narrative.TALK_TO_GIRL_1)
+    print(Fore.RED)
+    txt_effect(narrative.TALK_TO_GIRL_2)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.TALK_TO_GIRL_3)
+    print(Fore.RED)
+    txt_effect(narrative.TALK_TO_GIRL_4)
+    choose_your_path('Press Enter to start Act 3.\n',
+                     '',
+                     '',
+                     'Invalid choice, press Enter.',
+                     chapter_three,
+                     chapter_three
+                     )
+
+
+def enter_office():
+    '''
+    directly enter the office
+    '''
+    clear_terminal()
+    txt_effect(narrative.PORT_OFFICE)
+    choose_your_path('Press Enter to talk to the girl.\n',
+                     '',
+                     '',
+                     'Invalid choice, please report what has happened.',
+                     make_report,
+                     make_report
+                     )
