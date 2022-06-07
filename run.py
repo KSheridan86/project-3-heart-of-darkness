@@ -247,4 +247,30 @@ def end_story():
     '''
     print(Style.RESET_ALL)
     print('Thanks for playing, come back soon.')
-    
+
+
+def begin_game():
+    '''
+    Asks you to begin the game, prints the first
+    paragraph and loads the first choice.
+    '''
+
+    print()
+    answer = input(
+        Fore.YELLOW + 'Would you like to start the story? (Y/N)\n').lower()
+    if answer == 'y':
+        clear_terminal()
+        txt_effect(intro_text)
+        choose_your_path('Volunteer or Stay with the boat? [V/S]\n',
+                         'v',
+                         's',
+                         "This is not a valid selection....Try again.",
+                         volunteer,
+                         stay_with_boat
+                         )
+    elif answer == 'n':
+        game_over()
+    else:
+        print("This is not a valid selection....Try again.")
+        begin_game()
+        
