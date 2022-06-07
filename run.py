@@ -10,6 +10,7 @@ import time
 import random
 import sys
 import os
+# import colorama
 from colorama import init
 from colorama import Fore, Style
 import narrative
