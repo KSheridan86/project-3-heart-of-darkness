@@ -358,3 +358,38 @@ def drink_bourbon():
                      chapter_two
                      )
 
+# Chapter 1 Fork 2
+
+
+def stay_with_boat():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.STAY)
+    choose_your_path('Stay and help or take what you can and Escape? (S/E)\n',
+                     's',
+                     'e',
+                     'Invalid choice, please choose a path.',
+                     pass_functions_into_choices,
+                     escape_boat,
+                     narrative.STAY_ON_BOAT,
+                     game_over
+                     )
+
+# Chapter 1 Fork 2.1
+
+
+def escape_boat():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.ESCAPE_BOAT)
+    choose_your_path('Press Enter to start Act two.\n',
+                     '',
+                     '',
+                     'Invalid choice, press Enter.',
+                     chapter_two,
+                     chapter_two
+                     )
