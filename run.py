@@ -633,3 +633,21 @@ def join_ishmel():
                      )
 
 
+# Chapter three
+# Fork 1
+
+def go_fish():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    print(Fore.BLUE + ascii_art.FISH)
+    print(Style.RESET_ALL)
+    txt_effect(narrative.GO_FISH)
+    choose_your_path('Press Enter to begin fishing.\n',
+                     '',
+                     '',
+                     'Invalid choice, Press Enter to Fish.',
+                     fish_game,
+                     fish_game
+                     )
