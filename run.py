@@ -883,3 +883,5 @@ def arrive_plantation_mechanics():
                      menu,
                      game_over_alive
                      )
+
+pass_functions_into_choices(narrative.TITLE_TEXT, begin_game)
