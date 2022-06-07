@@ -466,3 +466,132 @@ def enter_office():
                      make_report,
                      make_report
                      )
+
+
+#  Chapter 2 Fork 2
+
+
+def visit_bar():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    print(Fore.LIGHTWHITE_EX + ascii_art.SALOON)
+    txt_effect(narrative.VISIT_BAR)
+    choose_your_path('Do you Gamble or go get a Drink? (G/D)\n',
+                     'g',
+                     'd',
+                     'Invalid choice, please choose your next move.',
+                     enter_room,
+                     drink
+                     )
+
+
+def refuse_drink_visit_office():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.CUT_OFF)
+    txt_effect(narrative.PORT_OFFICE)
+    choose_your_path('Press Enter to talk to the girl.\n',
+                     '',
+                     '',
+                     'Invalid choice, please report what has happened.',
+                     make_report,
+                     make_report
+                     )
+
+# Chapter 2 Fork 2.1 (Russian roulette)
+
+
+def enter_room():
+    '''
+    creepy room
+    '''
+    clear_terminal()
+    txt_effect(narrative.ENTER_ROOM)
+    choose_your_path('Do you Stay or go back to the Bar? (S/B)\n',
+                     's',
+                     'b',
+                     'Invalid choice, please choose your next move.',
+                     gamble_room,
+                     drink
+                     )
+
+
+def gamble_room():
+    '''
+    get ready to play
+    '''
+    clear_terminal()
+    txt_effect(narrative.GAMBLE)
+    choose_your_path('Do you Run or Play? (R/P)\n',
+                     'r',
+                     'p',
+                     'Invalid choice, please choose your next move.',
+                     pass_functions_into_choices,
+                     russian_roulette,
+                     narrative.RUN_FROM_GAME,
+                     game_over
+                     )
+
+
+def survive_game_enter_office():
+    '''
+    directly enter the office after russian roulette
+    '''
+    clear_terminal()
+    txt_effect(narrative.ROULETTE_VICTORY + narrative.PORT_OFFICE)
+    choose_your_path('Press Enter to talk to the girl.\n',
+                     '',
+                     '',
+                     'Invalid choice, please report what has happened.',
+                     make_report,
+                     make_report
+                     )
+
+# Chapter 2 Fork 2.2
+
+
+def drink():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    txt_effect(narrative.DRINK_AT_BAR)
+    choose_your_path('Do you want another Drink? (Y/N)\n',
+                     'n',
+                     'y',
+                     'Invalid choice, Another drink?',
+                     pass_functions_into_choices,
+                     another_drink,
+                     narrative.LEAVE_BAR_AFTER_DRINK,
+                     visit_office
+                     )
+
+
+def another_drink():
+    """
+    Placeholder docstring to remove errors
+    """
+    clear_terminal()
+    print(Style.RESET_ALL)
+    if narrative.TOTAL_DRINKS > 3:
+        refuse_drink_visit_office()
+    else:
+        narrative.TOTAL_DRINKS += 1
+        txt_effect(f'''
+        "Can i have another?"
+
+        "Sure, number {narrative.TOTAL_DRINKS} coming right up."
+        ''')
+        choose_your_path('Do you want another Drink? (Y/N)\n',
+                         'n',
+                         'y',
+                         'Invalid choice, Another drink?',
+                         pass_functions_into_choices,
+                         another_drink,
+                         narrative.LEAVE_BAR_AFTER_DRINK,
+                         visit_office
+                         )
