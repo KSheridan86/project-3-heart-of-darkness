@@ -10,7 +10,7 @@ import time
 import random
 import sys
 import os
-import colorama
+# import colorama
 from colorama import init
 from colorama import Fore, Style
 import narrative
@@ -194,11 +194,11 @@ def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
     # '''
-    # for character in text_to_print:
-    #     sys.stdout.write(character)
-    #     sys.stdout.flush()
-    #     time.sleep(0.001)
-    print(text_to_print)
+    for character in text_to_print:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.001)
+    # print(text_to_print)
 
 
 def clear_terminal():
@@ -302,8 +302,10 @@ intro_text = f"""
 
         """
 
+
 # Chapter 1
 # Chapter 1 Fork 1
+
 
 def volunteer():
     '''
@@ -682,7 +684,7 @@ def river_discovery():
     placeholder docstring
     '''
     clear_terminal()
-    txt_effect(f'       Standing on the deck are two men dressed in mechanics overalls.')
+    txt_effect('       Standing on the deck are two men dressed in overalls.')
     print(Fore.RED)
     txt_effect(narrative.PLANTATION_MECHANICS_1)
     print(Style.RESET_ALL)
@@ -883,5 +885,6 @@ def arrive_plantation_mechanics():
                      menu,
                      game_over_alive
                      )
+
 
 pass_functions_into_choices(narrative.TITLE_TEXT, begin_game)

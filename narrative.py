@@ -389,7 +389,7 @@ GO_FISH = '''
         the beauty of this place is hard to ignore...
 
         Press Enter to begin fishing...
-        
+
 '''
 PLANTATION_WITH_ISHMEL = '''
         "I thank you for your efforts and your concern.
@@ -408,7 +408,7 @@ PLANTATION_WITH_ISHMEL = '''
         the factories and from there down to the pier.
         Ishmel shouts out....\n
                 "Grab that rope and tie us off!"\n
-        
+
 '''
 
 PLANTATION_MECHANICS_1 = '''
