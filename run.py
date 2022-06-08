@@ -97,9 +97,9 @@ def fish_game():
 
     if answer:
         narrative.FISH_CAUGHT += 1
-        print('You caught a Fish!!\n')
-        print(f"You now have {narrative.FISH_CAUGHT} fish in your bucket.\n")
-        choose_your_path('Keep Fishing? (Y/N)\n',
+        print('     You caught a Fish!!\n')
+        print(f"    You now have {narrative.FISH_CAUGHT} fish in your bucket.")
+        choose_your_path('\n    Keep Fishing? (Y/N)\n',
                          'y',
                          'n',
                          'Invalid choice, Keep Fishing?',
@@ -107,9 +107,9 @@ def fish_game():
                          sleep
                          )
     else:
-        print('No luck, try again?\n')
-        print(f"You have caught {narrative.FISH_CAUGHT} fish.\n")
-        choose_your_path('Keep trying? (Y/N)\n',
+        print('     No luck, try again?\n')
+        print(f"    You have caught {narrative.FISH_CAUGHT} fish.\n")
+        choose_your_path('      Keep trying? (Y/N)\n',
                          'y',
                          'n',
                          'Invalid choice, Keep trying?',
@@ -217,7 +217,7 @@ def game_over():
     time.sleep(2)
     clear_terminal()
     print(Fore.RED + ascii_art.GAME_OVER)
-    choose_your_path('Would you like to play again? [Y/N]\n',
+    choose_your_path('      Would you like to play again? [Y/N]\n',
                      'y',
                      'n',
                      "This is not a valid selection....Try again.",
@@ -232,7 +232,7 @@ def game_over_alive():
     '''
     clear_terminal()
     print(Fore.BLUE + ascii_art.GAME_OVER_ALIVE)
-    choose_your_path('Would you like to play again? [Y/N]\n',
+    choose_your_path('      Would you like to play again? [Y/N]\n',
                      'y',
                      'n',
                      "This is not a valid selection....Try again.",
@@ -246,7 +246,7 @@ def end_story():
     Ends the game.
     '''
     print(Style.RESET_ALL)
-    print('Thanks for playing, come back soon.')
+    print('     Thanks for playing, come back soon.')
 
 
 def begin_game():
@@ -257,14 +257,14 @@ def begin_game():
 
     print()
     answer = input(
-        Fore.YELLOW + 'Would you like to start the story? (Y/N)\n').lower()
+        Fore.YELLOW + '    Would you like to start the story? (Y/N)\n').lower()
     if answer == 'y':
         clear_terminal()
         print(Fore.LIGHTYELLOW_EX)
         print(ascii_art.ACT_1)
         print(Style.RESET_ALL)
         txt_effect(intro_text)
-        choose_your_path('Volunteer or Stay with the boat? [V/S]\n',
+        choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
                          'v',
                          's',
                          "This is not a valid selection....Try again.",
@@ -279,7 +279,6 @@ def begin_game():
 
 
 # Start story
-
 print(Fore.LIGHTYELLOW_EX)
 print(ascii_art.TITLE)
 print(Fore.GREEN + Style.BRIGHT)
@@ -445,11 +444,11 @@ def make_report():
     '''
     clear_terminal()
     txt_effect(narrative.TALK_TO_GIRL_1)
-    print(Fore.RED)
+    print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.TALK_TO_GIRL_2)
     print(Style.RESET_ALL)
     txt_effect(narrative.TALK_TO_GIRL_3)
-    print(Fore.RED)
+    print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.TALK_TO_GIRL_4)
     choose_your_path('      Press Enter to start Act 3.\n',
                      '',
@@ -694,11 +693,11 @@ def river_discovery():
     clear_terminal()
     txt_effect(
         '\n         Standing on the deck are two men dressed in overalls.')
-    print(Fore.RED)
+    print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.PLANTATION_MECHANICS_1)
     print(Style.RESET_ALL)
     txt_effect(narrative.PLANTATION_MECHANICS_2)
-    print(Fore.RED)
+    print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.PLANTATION_MECHANICS_3)
     print(Style.RESET_ALL)
     choose_your_path('      Go with the men? or Stay with Ishmel? (G/S)\n',
@@ -784,7 +783,7 @@ def board_boat():
     '''
     clear_terminal()
     txt_effect(narrative.BOARD_BOAT)
-    print(Fore.RED)
+    print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.BOARD_BOAT_2)
     print(Style.RESET_ALL)
     txt_effect(narrative.BOARD_BOAT_3)
@@ -803,7 +802,7 @@ def wait_on_mechanics():
     '''
     clear_terminal()
     txt_effect(narrative.WAIT_ON_MECHANICS_1)
-    print(Fore.RED)
+    print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.WAIT_ON_MECHANICS_2)
     print(Style.RESET_ALL)
     txt_effect(narrative.BOARD_BOAT_3)
@@ -824,7 +823,7 @@ def decide_to_leave():
     placeholder docstring
     '''
     txt_effect(narrative.DECIDE_TO_LEAVE_1)
-    print(Fore.RED)
+    print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.DECIDE_TO_LEAVE_2)
     print(Style.RESET_ALL)
     txt_effect(narrative.DECIDE_TO_LEAVE_2)

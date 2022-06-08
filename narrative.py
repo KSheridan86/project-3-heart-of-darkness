@@ -80,7 +80,8 @@ DONT_FIGHT = '''
                 good for the heart apparently!"\n
 '''
 BOURBON = """
-        \nHOLY SHIT! That's strong stuff!\n
+        \n
+        HOLY SHIT! That's strong stuff!\n
         Thanks i guess, let's keep moving, we might have to find somewhere
         to camp again tonight, this vegetation is so thick, it really
         slows us down. But we should make it to town by the morning...\n
