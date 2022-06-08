@@ -19,8 +19,8 @@
             rows: 32
         });
         term.open(document.getElementById('terminal'));
-        term.writeln('Running startup command: python3 run.py');
-        term.writeln('');
+        term.writeln('Loading narrative....preparing virtual world....');
+        // term.writeln('');
 
         var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
             ':' + location.port) : '') + '/');

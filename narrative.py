@@ -80,11 +80,11 @@ DONT_FIGHT = '''
                 good for the heart apparently!"\n
 '''
 BOURBON = """
-        HOLY SHIT! That's strong stuff!
+        \nHOLY SHIT! That's strong stuff!\n
         Thanks i guess, let's keep moving, we might have to find somewhere
         to camp again tonight, this vegetation is so thick, it really
-        slows us down. But we should make it to town by the morning...
-        -------------------------------------------------------------------
+        slows us down. But we should make it to town by the morning...\n
+        -------------------------------------------------------------------\n
         Sven dissapeared in the night without a word. First worried,
         but then later relieved. He was definitely going to cause problems.\n
     """
@@ -132,7 +132,7 @@ STAY_ON_BOAT = """
 
         But suddenly a giant man (the local fixer as it turns out) has had
         quite enough of being told what to do.
-        In one hand he is holding the Captains gun, in the other he's got
+        In one hand he is holding the captains gun, in the other he's got
         the captain himself, held up by the throat.\n
         He doesn't wait to hear your objection.....\n
         BANG!!!\n
@@ -160,15 +160,14 @@ ACT_TWO = """
 VISIT_BAR = '''
         You stumble through the heavy wooden doors into the bar and are
         immediatly relieved by how cool it is. It was at least 10degrees
-        cooler inside.\n
+        cooler inside.
         All of the windows are boarded up, it was as dark as a moonless night.
         The only light at all was coming in through a narrow hatch above
-        the door angled to catch the breeze coming in off the river.\n
+        the door angled to catch the breeze coming in off the river.
         You start making your way over to the bar when a disheveled looking
         man steps in your way.
 
         "Interested in a little gambling?
-
         he asks with a vaguely mischievous smile.
 
     '''
@@ -501,7 +500,7 @@ ARRIVE_PLANTATION = '''
         You step down onto the pier and immediately feel relieved.
         This place is huge, factories with bunkhouses line the river bank.
         The main street cuts straight through the town square equipped with
-        a sheriff's office, a library, a court house, a small market store,
+        a sheriff's office, a court house, a library, a small market store,
         a doctors office and a schoolhouse, my schoolhouse!\n
         How was all of this possible in this place?
         I feel like I have stared into the heart of darkness, that this place
@@ -537,7 +536,8 @@ OUTRO_QUOTE = '''
 '''
 END = '''
         Ain't that the truth.....
-        ...............The End.
+
+                   ...............The End.
 
 '''
 MENU = '''
