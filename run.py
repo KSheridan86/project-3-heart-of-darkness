@@ -283,7 +283,7 @@ print(Fore.GREEN + Style.BRIGHT)
 txt_effect(narrative.INTRO)
 print(Style.RESET_ALL)
 time.sleep(.5)
-name = input('Please enter your name to continue....\n').capitalize()
+name = input('  Please enter your name to continue....\n').capitalize()
 while not name or len(name) > 50:
     name = input('''Ooops too long, Max of 50 characters...\n
 Please enter your name to continue....\n''').capitalize()

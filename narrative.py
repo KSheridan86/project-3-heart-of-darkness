@@ -32,7 +32,8 @@ TITLE_TEXT = '''
         Good luck.
 '''
 
-INTRO = """    "Whoever fights monsters should see to it
+INTRO = """    
+                "Whoever fights monsters should see to it
                 that in the process he does not become a monster.
                 And if you gaze long enough into an abyss
                 the abyss will gaze back into you."
