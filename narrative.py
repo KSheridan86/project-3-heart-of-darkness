@@ -33,27 +33,25 @@ TITLE_TEXT = '''
         Good luck.
 '''
 
-INTRO = """    
+INTRO = """
                 "Whoever fights monsters should see to it
                 that in the process he does not become a monster.
                 And if you gaze long enough into an abyss
                 the abyss will gaze back into you."
-                                        ― Friedrich Nietzsche
 """
 
 # Chapter 1
 
 VOLUNTEER = """
-        Into the jungle we went.
-        Nothing with us except a tent,
+        Into the jungle we went, nothing with us except a tent,
         some rations and a couple of bottles of water.\n
-        After a long sleepless night
-        in a tent barely capable of keeping the mosquitos away
-        we begin our second day in the blistering heat.\n
+        After a long sleepless night in a tent barely capable of
+        keeping the mosquitos away we begin our second day in the
+        blistering heat.\n
         My fellow volunteer was a Dutch man named Sven,
         he was in high spirits but was quite clearly insane.\n
-        He hadn't slept but had spent half of the night
-        pacing back and forth muttering to himself...
+        He hadn't slept but had spent half of the night pacing
+        back and forth muttering to himself....
         ...and unbeknownst to me drinking all of the damn water.\n
     """
 FIGHT_SVEN = '''
@@ -67,15 +65,14 @@ FIGHT_SVEN = '''
 '''
 DONT_FIGHT = '''
         We had nearly come to blows over his wreckless selfish behavior.
-        But we were only a days walk from the town now,
+        But we were only a days walk from the town now.
         I thought it better to just get the hell out of here...\n
         The humidity was so high it felt like we were drowning just trying
         to breathe...
-        This was the Jungle, the Congo to be exact,
-        there was bound to be water somewhere.\n
-        Before long I was proven right,
-        we were forced to find a path around this huge boulder
-        and I noticed a little stream coming down from the top .\n
+        This was the Jungle, the Congo to be exact, there was bound to be
+        water somewhere.\n
+        Before long I was proven right, we were forced to find a path around a
+        huge boulder and I noticed a little stream coming down from the top.\n
         WAIT! WAIT!! Cried Sven,
         Don't drink that, trust me the water around here is no good.
         Here have some of this...Sven holds out his hip flask.\n
@@ -84,35 +81,31 @@ DONT_FIGHT = '''
 '''
 BOURBON = """
         HOLY SHIT! That's strong stuff!
-        Thanks i guess, let's keep moving,
-        we might have to find somewhere to camp again tonight,
-        this vegetation is so thick, it really slows us down.
-        But we should make it to the town by the morning...
-
-        Sven dissapeared in the night without a word.
-        First worried, but then later relieved he was gone,
-        he was definitely going to cause problems.
-
+        Thanks i guess, let's keep moving, we might have to find somewhere
+        to camp again tonight, this vegetation is so thick, it really
+        slows us down. But we should make it to town by the morning...
+        -------------------------------------------------------------------
+        Sven dissapeared in the night without a word. First worried,
+        but then later relieved. He was definitely going to cause problems.\n
     """
 
 WATER = """
         Sven was right,
         within minutes of drinking the water you begin to feel uneasy.
-        Soon your vomiting uncontrollably and Sven carries on without you...
-        ########################################
+        Soon your vomiting uncontrollably and Sven carries on without you...\n
     """
 
 STAY = """
         Days pass with no word from the volunteers or the station master...
-        Low on food and fresh water, driven mad by the heat
-        the men begin to turn on each other.\n
+        Low on food and fresh water, driven mad by the heat the men begin
+        to turn on each other.\n
         BANG!!\n
         A shot rings out across the still water...
-        Some of the crew had tried to steal some food for themselves
-        and the Captain had shot one of them.\n
+        Some of the crew had tried to steal some food for themselves and the
+        captain had shot one of them.\n
         Things turned bad very quickly...\n
-        The Captain turned the gun on the other crew members but
-        they rushed him all at once...\n
+        The Captain turned the gun on the other crew members but they rushed
+        him all at once...\n
         BANG! BANG BANG!!!\n
         It's hard to see much in the confusion.\n
         The deck is slick with blood and screams fill the dense jungle air.
@@ -121,32 +114,29 @@ STAY = """
     """
 
 ESCAPE_BOAT = """
-        You jump from the deck and run as fast as you can
-        deep into the undergrowth.
-        With each step you take the noise from the boat grows a little quieter,
-        the deafening silence of the jungle engulfs you...\n
-        You walk for what feels like days, sleeping when you can,
-        managing short bursts between the terrifying sounds that eminate
-        from the infinite nothingness that surrounds you.\n
-        With only the supplies you could carry as you fled
-        you settle down for another night splayed along a thick branch of a
-        giant mahogany tree.
+        You jump from the deck and run as fast as you can into the undergrowth.
+        With each step you take the noise from the boat grows a little quieter
+        as the deafening silence of the jungle engulfs you...\n
+        You walk for what feels like days, sleeping when you can, managing
+        short bursts between the terrifying sounds that eminate from the
+        infinite nothingness that surrounds you.\n
+        With only the supplies you could carry as you fled you settle down for
+        another night splayed along a thick branch of a giant mahogany tree.
 
     """
 
 STAY_ON_BOAT = """
         You jump up and begin to pull men apart.
-        At first it feels like your making a difference,
-        the noise is a little quieter and more of the crew are turning to look.
+        At first it feels like your making a difference, the noise is a little
+        quieter and more of the crew are turning to look.
 
-        But suddenly a giant man (the local fixer as it turns out)
-        has had quite enough of being told what to do.
-        In one hand he is holding the Captains gun,
-        in the other he's got the Captain himself, held up by the throat.\n
-        He doesn't wait to hear your objection.....
+        But suddenly a giant man (the local fixer as it turns out) has had
+        quite enough of being told what to do.
+        In one hand he is holding the Captains gun, in the other he's got
+        the captain himself, held up by the throat.\n
+        He doesn't wait to hear your objection.....\n
         BANG!!!\n
         Game Over, You have Died!
-        ############################################
     """
 
 # Act 2
@@ -157,10 +147,10 @@ ACT_TWO = """
         "The town, oh how sweet a sight you are!"\n
         You push through the undergrowth onto a path beaten clear by
         generations of locals coming to and from the little port.\n
-        Walking along the little dirt path into the town
-        the river on your right and dense jungle on your left.
-        You can see the port offices hugging the river bank up ahead and boats,
-        mostly local fishing boats lining the banks waiting to load or unload.
+        Walking along the little dirt path into the town the river on your
+        right and dense jungle on your left. You can see the port offices
+        hugging the river bank up ahead and boats, mostly local fishing boats
+        lining the banks waiting to load or unload.
 
         But you can also see the bar...
         Open for business.
@@ -168,15 +158,14 @@ ACT_TWO = """
     """
 
 VISIT_BAR = '''
-        You stumble through the heavy wooden doors into the bar
-        and are immediatly relieved by how cool it is.
-        It was at least 10degrees cooler inside.\n
-        All of the windows had been boarded up,
-        it was as dark as a moonless night.
+        You stumble through the heavy wooden doors into the bar and are
+        immediatly relieved by how cool it is. It was at least 10degrees
+        cooler inside.\n
+        All of the windows are boarded up, it was as dark as a moonless night.
         The only light at all was coming in through a narrow hatch above
         the door angled to catch the breeze coming in off the river.\n
-        You start making your way over to the bar
-        when a disheveled looking man steps in your way.
+        You start making your way over to the bar when a disheveled looking
+        man steps in your way.
 
         "Interested in a little gambling?
 
@@ -189,8 +178,7 @@ ENTER_ROOM = '''
         You enter into a windowless room filled with the stench of sweat and
         cigarette smoke. A lamp with a dirty sheet thrown over it stands in
         the corner it gives the room a strange muted glow.
-        A small wispy man sits alone at a round table
-        in the middle of the room. \n
+        A wiry man sits alone at a round table in the middle of the room.\n
 '''
 GAMBLE = '''
         SNAP!\n
@@ -202,11 +190,10 @@ GAMBLE = '''
         They were both holding weapons.\n
         "Please Sit..."\n
         The man at the table gestures to an empty seat directly opposite him.\n
-        "Here's how it's gonna go,
-        the game is Russian roulette,
+        "Here's how it's gonna go, the game is Russian roulette,
         if you try to run, my men will shoot you,
         if you don't play my men will shoot you,
-        if you try to cheat....well i guess you get the idea....\n
+        if you try to cheat......well i guess you get the idea....\n
         Now Sit!!"\n
         A grimy looking revolver is slid across the table to you.
 
@@ -219,13 +206,13 @@ RUN_FROM_GAME = '''
         One of the goons opens fire.
 '''
 SURVIVE = '''
-        Click
-        Empty, I was alive!\n
+                Click
+                Empty, I was alive!\n
         '''
-MANS_TURN = 'The man raises the gun to his head and pulls the trigger.\n'
+MANS_TURN = '   The man raises the gun to his head and pulls the trigger.\n'
 
 ROULETTE_VICTORY = '''
-        BANG!!
+        BANG!!\n
         The man's head explodes and for a split second the whole room glows red
         as the light shines through a fine mist of his blood.
         His goons creep forward and stare into the empty space that only a
@@ -236,8 +223,8 @@ ROULETTE_VICTORY = '''
         Either way the men didn't notice me jump up and burst out of the door.
 
         I bolted straight across the bar and back outside into the insane heat.
-        Catching my breath, I found my bearings and made my way straight
-        to the port offices.
+        Catching my breath, I found my bearings and made my way straight to
+        the port offices.
 '''
 
 DRINK_AT_BAR = '''
@@ -260,10 +247,9 @@ DRINK_AT_BAR = '''
 LEAVE_BAR_AFTER_DRINK = '''
         Using the bar for leverage you push yourself into a standing position
         and head back out into the heat.\n
-        As the morning grows older the heat increases
-        with each minute that passes.
-        The offices are only 300 yards away
-        but it feels like your running a marathon.
+        The morning is growing older, the heat increasing with each minute.
+        The offices are only 300 yards away but it feels like your running
+        a marathon.
 '''
 
 CUT_OFF = '''
@@ -273,10 +259,9 @@ CUT_OFF = '''
         Using the bar for leverage you push yourself into a standing position
         and head back out into the heat.
 
-        As the morning grows older the heat increases
-        with each minute that passes.
-        The offices are only 300 yards away
-        but it feels like your running a marathon.\n
+        The morning is growing older, the heat increasing with each minute.
+        The offices are only 300 yards away but it feels like your running
+        a marathon.\n
 '''
 
 PORT_OFFICE = '''
@@ -296,8 +281,8 @@ TALK_TO_GIRL_1 = '''
         "I need to report a very serious situation,
         I left here 3 days ago on a steamboat heading up to the rubber
         plantation. Two days ago it broke down, I have come back here on foot
-        to raise the alarm. Those men have been alone in the jungle
-        for three days now with very little fresh water."
+        to raise the alarm. Those men have been alone in the jungle for three
+        days now with very little fresh water."
 '''
 TALK_TO_GIRL_2 = '''
         "Oh that is serious, but i'm afraid we only have the facilities
@@ -306,8 +291,8 @@ TALK_TO_GIRL_2 = '''
         steamboat, they wouldn't be able to repair it.
         The plantation ships and mechanics are the ones who could help
         but they all left here in a hurry yesterday.
-        Something about needing all the hands they could get
-        up at the plantation."
+        Something about needing all the hands they could get up at
+        the plantation."
 '''
 TALK_TO_GIRL_3 = '''
         "Is there a way to contact them?"
@@ -359,16 +344,14 @@ REFUSE_FISHING = '''
 '''
 TALK_TO_ISHMEL = '''
         You explain the whole situation to Ishmel.
-        He's more than happy to take you to the rubber plantation with him,
-        he even suggests that it's possible to
-        find the boat on the way up river.
+        He's more than happy to take you to the rubber plantation, he even
+        suggests that it's possible to find the boat on the way up river.
 
         "We can bring them some water and a little hope.
         Hope is as important as food or sleep around here my friend"
 
         Within no time at all Ishmel unties his boat from the docks
-        and as the wind starts to run through your hair
-        you begin to feel better.
+        and as the wind runs through your hair you begin to feel better.
 
         "Do you like to fish? I've got a good fishing rod set up
         at the rear of the boat."
@@ -381,10 +364,8 @@ GO_FISH = '''
         You make your self comfortable and Ishmel hands you a bottle of beer.
 
         Casting your line the sun sparkles on the surface of the river.
-        You can see all manner of birds, fish, insects and
-        tropical plants.
-        After all you've been through
-        the beauty of this place is hard to ignore...
+        You can see all manner of birds, fish, insects and tropical plants.
+        After all you've seen the beauty of this place is hard to ignore...
 
         Press Enter to begin fishing...
 
@@ -441,7 +422,7 @@ OLD_BOAT = '''
 
         You jump across onto the mens boat.
         As you leave Ishmel shouts\n
-                "Be careful boys, it's a jungle out there"\n
+                "Be careful, it's a jungle out there"\n
         and proceeds to laugh hysterically.
 '''
 FIND_BOAT = '''
@@ -505,12 +486,12 @@ DECIDE_TO_LEAVE_3 = '''
 '''
 
 LEAVE_AFRICA = '''
-        The men bring you back to the town and you begin the long
-        wait for the journey home.
+        The men bring you back to the town and you begin the long wait
+        for the journey home.
         This has been a wasted trip, but nothing ventured nothing gained.
 
-        You spend your time in the bar, fishing on the river
-        and walking around the little town.
+        You spend your time in the bar, fishing on the river and walking
+        around the little town.
         You notice a plaque hung on the wall of the port offices
         and wonder why you never saw it before.
         It reads...

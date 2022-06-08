@@ -68,7 +68,7 @@ def russian_roulette():
             time.sleep(2)
             survive_game_enter_office()
         else:
-            txt_effect('        Click, Empty, my turn...\n')
+            txt_effect('            Click, Empty, my turn...\n')
             pull_trigger()
 
     pull_trigger()
@@ -791,7 +791,7 @@ def board_boat():
                      'c',
                      'Invalid choice, Please choose.',
                      leave_africa,
-                     arrive_plantation
+                     arrive_plantation_mechanics
                      )
 
 
