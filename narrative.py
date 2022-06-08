@@ -9,16 +9,17 @@ TITLE_TEXT = '''
         This story takes place in the early 20th century.
         During the Belgian colonial rule of the Congo.
 
-        Deep in the jungle you assume the character
-        of a young teacher relocating
-        your family to a school on a rubber plantation.
-        Government work with a large salary, generous pension
+        Deep in the jungle you assume the character of a young teacher
+        relocating your family to a school on a rubber plantation.
+        It's government work with a large salary, generous pension
         with room and board included.
 
-        Travelling ahead of the rest of your family to make
-        the arrangements for your new life.
+        Travelling ahead of the rest of your family to make the
+        arrangements for your new life.
 
         What's the worst that could happen?
+
+        --------------------------------------------------------
 
         The object of this game is to navigate your way through
         the story and dictate the path your character will take.
@@ -111,7 +112,7 @@ STAY = """
         and the Captain had shot one of them.\n
         Things turned bad very quickly...\n
         The Captain turned the gun on the other crew members but
-        they rushed him all at once...
+        they rushed him all at once...\n
         BANG! BANG BANG!!!\n
         It's hard to see much in the confusion.\n
         The deck is slick with blood and screams fill the dense jungle air.
@@ -151,7 +152,6 @@ STAY_ON_BOAT = """
 # Act 2
 
 ACT_TWO = """
-        Act 2\n
         Another night spent in this opressive place with no sleep but finally
         you enter a clearing and up ahead you can see the backs of buildings.\n
         "The town, oh how sweet a sight you are!"\n
@@ -322,8 +322,6 @@ TALK_TO_GIRL_4 = '''
 # Act 3
 
 ACT_THREE = '''
-        Act 3
-
         Back out into the furnace you go. Your clothes now so soaked
         with sweat it feels like you've been swimming.
 

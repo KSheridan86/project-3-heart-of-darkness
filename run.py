@@ -260,6 +260,9 @@ def begin_game():
         Fore.YELLOW + 'Would you like to start the story? (Y/N)\n').lower()
     if answer == 'y':
         clear_terminal()
+        print(Fore.LIGHTYELLOW_EX)
+        print(ascii_art.ACT_1)
+        print(Style.RESET_ALL)
         txt_effect(intro_text)
         choose_your_path('Volunteer or Stay with the boat? [V/S]\n',
                          'v',
@@ -290,7 +293,6 @@ Please enter your name to continue....\n''').capitalize()
 
 
 intro_text = f"""
-        Act 1\n
         The year was 1902 and the steamboat I was travelling on had
         blown an engine. Miles from the town we had left yesterday and
         half a world from home.\n
@@ -405,6 +407,9 @@ def act_two():
     Placeholder docstring to remove errors
     """
     clear_terminal()
+    print(Fore.LIGHTYELLOW_EX)
+    print(ascii_art.ACT_2)
+    print(Style.RESET_ALL)
     txt_effect(narrative.ACT_TWO)
     choose_your_path('Do you go to the Bar? or the port Offices? (O/B)\n',
                      'o',
@@ -607,6 +612,9 @@ def act_three():
     Placeholder docstring to remove errors
     """
     clear_terminal()
+    print(Fore.LIGHTYELLOW_EX)
+    print(ascii_art.ACT_3)
+    print(Style.RESET_ALL)
     txt_effect(narrative.ACT_THREE)
     choose_your_path('Press Enter to talk to Ishmel.\n',
                      '',
