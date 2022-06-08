@@ -282,7 +282,6 @@ print(ascii_art.TITLE)
 print(Fore.GREEN + Style.BRIGHT)
 txt_effect(narrative.INTRO)
 print(Style.RESET_ALL)
-print()
 time.sleep(.5)
 name = input('Please enter your name to continue....\n').capitalize()
 while not name or len(name) > 50:
