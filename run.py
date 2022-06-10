@@ -10,7 +10,6 @@ import time
 import random
 import sys
 import os
-# import colorama
 from colorama import init
 from colorama import Fore, Style
 import narrative
@@ -28,18 +27,18 @@ def russian_roulette():
     clear_terminal()
     print(Fore.LIGHTBLUE_EX + ascii_art.GUN)
     print(Style.RESET_ALL)
-    txt_effect('You pick up the revolver and hold it to your head.')
+    txt_effect('    You pick up the revolver and hold it to your head.')
     kill_shot = random.randrange(1, 6)
 
     def pull_trigger():
         '''
         Asks you to pull the trigger of a six shot revolver.
         '''
-        trigger = input('\nPress X and then Enter to fire.\n').lower()
+        trigger = input('\n Press X and then Enter to fire.\n').lower()
         if trigger == 'x':
             take_shot()
         else:
-            print('Wrong key, try again.')
+            print('     Wrong key, try again.')
 
     def take_shot():
         '''
@@ -51,7 +50,7 @@ def russian_roulette():
         shot = barrel[random.randrange(0, len(barrel))]
         barrel.remove(shot)
         if shot == kill_shot:
-            txt_effect('Kill shot, You are dead!')
+            txt_effect('        Kill shot, You are dead!')
             game_over()
         else:
             txt_effect(narrative.SURVIVE)
@@ -102,7 +101,7 @@ def fish_game():
         choose_your_path('\n    Keep Fishing? (Y/N)\n',
                          'y',
                          'n',
-                         'Invalid choice, Keep Fishing?',
+                         '      Invalid choice, Keep Fishing?',
                          fish_game,
                          sleep
                          )
@@ -112,7 +111,7 @@ def fish_game():
         choose_your_path('      Keep trying? (Y/N)\n',
                          'y',
                          'n',
-                         'Invalid choice, Keep trying?',
+                         '      Invalid choice, Keep trying?',
                          fish_game,
                          sleep
                          )
@@ -175,10 +174,10 @@ def menu():
     if option == '1':
         clear_terminal()
         txt_effect(intro_text)
-        choose_your_path('Volunteer or Stay with the boat? [V/S]\n',
+        choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
                          'v',
                          's',
-                         "This is not a valid selection....Try again.",
+                         "      This is not a valid selection....Try again.",
                          volunteer,
                          stay_with_boat
                          )
@@ -220,7 +219,7 @@ def game_over():
     choose_your_path('      Would you like to play again? [Y/N]\n',
                      'y',
                      'n',
-                     "This is not a valid selection....Try again.",
+                     "      This is not a valid selection....Try again.",
                      menu,
                      end_story
                      )
@@ -235,7 +234,7 @@ def game_over_alive():
     choose_your_path('      Would you like to play again? [Y/N]\n',
                      'y',
                      'n',
-                     "This is not a valid selection....Try again.",
+                     "      This is not a valid selection....Try again.",
                      menu,
                      end_story
                      )
@@ -267,7 +266,7 @@ def begin_game():
         choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
                          'v',
                          's',
-                         "This is not a valid selection....Try again.",
+                         "      This is not a valid selection....Try again.",
                          volunteer,
                          stay_with_boat
                          )
@@ -287,8 +286,8 @@ print(Style.RESET_ALL)
 time.sleep(.5)
 name = input('  Please enter your name to continue.......').capitalize()
 while not name or len(name) > 50:
-    name = input('''Ooops too long, Max of 50 characters...\n
-Please enter your name to continue....\n''').capitalize()
+    name = input('''    Ooops too long, Max of 50 characters...\n
+    Please enter your name to continue....\n''').capitalize()
 
 
 intro_text = f"""
@@ -318,7 +317,7 @@ def volunteer():
     choose_your_path('      Do you get Angry or stay Calm? (A/C)\n',
                      'a',
                      'c',
-                     'Invalid choice, please choose...',
+                     '      Invalid choice, please choose...',
                      pass_functions_into_choices,
                      dont_fight_sven,
                      narrative.FIGHT_SVEN,
@@ -335,7 +334,7 @@ def dont_fight_sven():
     choose_your_path('      Do you drink the Water or the Bourbon? (W/B)\n',
                      'w',
                      'b',
-                     'Invalid choice, please choose a drink.',
+                     '      Invalid choice, please choose a drink.',
                      pass_functions_into_choices,
                      drink_bourbon,
                      narrative.WATER,
@@ -355,7 +354,7 @@ def drink_bourbon():
     choose_your_path('      Press Enter to start Act two.\n',
                      '',
                      '',
-                     'Invalid choice, press Enter.',
+                     '      Invalid choice, press Enter.',
                      act_two,
                      act_two
                      )
@@ -373,7 +372,7 @@ def stay_with_boat():
                 '      Stay and help or take what you can and Escape? (S/E)\n',
                 's',
                 'e',
-                'Invalid choice, please choose a path.',
+                '       Invalid choice, please choose a path.',
                 pass_functions_into_choices,
                 escape_boat,
                 narrative.STAY_ON_BOAT,
@@ -392,7 +391,7 @@ def escape_boat():
     choose_your_path('      Press Enter to start Act two.\n',
                      '',
                      '',
-                     'Invalid choice, press Enter.',
+                     '      Invalid choice, press Enter.',
                      act_two,
                      act_two
                      )
@@ -414,7 +413,7 @@ def act_two():
     choose_your_path('     Do you go to the Bar? or the port Offices? (O/B)\n',
                      'o',
                      'b',
-                     'Invalid choice, please choose a destination.',
+                     '      Invalid choice, please choose a destination.',
                      enter_office,
                      visit_bar
                      )
@@ -432,7 +431,7 @@ def visit_office():
     choose_your_path('      Press Enter to talk to the girl.\n',
                      '',
                      '',
-                     'Invalid choice, please report what has happened.',
+                     '      Invalid choice, please report what has happened.',
                      make_report,
                      make_report
                      )
@@ -453,7 +452,7 @@ def make_report():
     choose_your_path('      Press Enter to start Act 3.\n',
                      '',
                      '',
-                     'Invalid choice, press Enter.',
+                     '      Invalid choice, press Enter.',
                      act_three,
                      act_three
                      )
@@ -468,7 +467,7 @@ def enter_office():
     choose_your_path('      Press Enter to talk to the girl.\n',
                      '',
                      '',
-                     'Invalid choice, please report what has happened.',
+                     '      Invalid choice, please report what has happened.',
                      make_report,
                      make_report
                      )
@@ -487,7 +486,7 @@ def visit_bar():
     choose_your_path('      Do you Gamble or go get a Drink? (G/D)\n',
                      'g',
                      'd',
-                     'Invalid choice, please choose your next move.',
+                     '      Invalid choice, please choose your next move.',
                      enter_room,
                      drink
                      )
@@ -503,7 +502,7 @@ def refuse_drink_visit_office():
     choose_your_path('      Press Enter to talk to the girl.\n',
                      '',
                      '',
-                     'Invalid choice, please report what has happened.',
+                     '      Invalid choice, please report what has happened.',
                      make_report,
                      make_report
                      )
@@ -520,7 +519,7 @@ def enter_room():
     choose_your_path('      Do you Stay or go back to the Bar? (S/B)\n',
                      's',
                      'b',
-                     'Invalid choice, please choose your next move.',
+                     '      Invalid choice, please choose your next move.',
                      gamble_room,
                      drink
                      )
@@ -535,7 +534,7 @@ def gamble_room():
     choose_your_path('      Do you Run or Play? (R/P)\n',
                      'r',
                      'p',
-                     'Invalid choice, please choose your next move.',
+                     '      Invalid choice, please choose your next move.',
                      pass_functions_into_choices,
                      russian_roulette,
                      narrative.RUN_FROM_GAME,
@@ -552,7 +551,7 @@ def survive_game_enter_office():
     choose_your_path('      Press Enter to talk to the girl.\n',
                      '',
                      '',
-                     'Invalid choice, please report what has happened.',
+                     '      Invalid choice, please report what has happened.',
                      make_report,
                      make_report
                      )
@@ -569,7 +568,7 @@ def drink():
     choose_your_path('\n        Do you want another Drink? (Y/N)\n',
                      'n',
                      'y',
-                     'Invalid choice, Another drink?',
+                     '      Invalid choice, Another drink?',
                      pass_functions_into_choices,
                      another_drink,
                      narrative.LEAVE_BAR_AFTER_DRINK,
@@ -595,7 +594,7 @@ def another_drink():
         choose_your_path('\n        Do you want another Drink? (Y/N)\n',
                          'n',
                          'y',
-                         'Invalid choice, Another drink?',
+                         '      Invalid choice, Another drink?',
                          pass_functions_into_choices,
                          another_drink,
                          narrative.LEAVE_BAR_AFTER_DRINK,
@@ -619,7 +618,7 @@ def act_three():
     choose_your_path('      Press Enter to talk to Ishmel.\n',
                      '',
                      '',
-                     'Invalid choice, You must talk to Ishmel.',
+                     '      Invalid choice, You must talk to Ishmel.',
                      join_ishmel,
                      join_ishmel
                      )
@@ -636,7 +635,7 @@ def join_ishmel():
     choose_your_path('      Do you Fish? (Y/N)\n',
                      'y',
                      'n',
-                     'Invalid choice, Do you Fish?',
+                     '      Invalid choice, Do you Fish?',
                      go_fish,
                      sleep
                      )
@@ -656,7 +655,7 @@ def go_fish():
     choose_your_path('      Press Enter to begin fishing.\n',
                      '',
                      '',
-                     'Invalid choice, Press Enter to Fish.',
+                     '      Invalid choice, Press Enter to Fish.',
                      fish_game,
                      fish_game
                      )
@@ -675,7 +674,7 @@ def sleep():
     choose_your_path('      Press Enter to speak with the men.\n',
                      '',
                      '',
-                     'Invalid choice, You must speak to these men.',
+                     '      Invalid choice, You must speak to these men.',
                      river_discovery,
                      river_discovery
                      )
@@ -692,7 +691,7 @@ def river_discovery():
     '''
     clear_terminal()
     txt_effect(
-        '\n         Standing on the deck are two men dressed in overalls.')
+        '\n           Standing on the deck are two men dressed in overalls.')
     print(Fore.LIGHTCYAN_EX)
     txt_effect(narrative.PLANTATION_MECHANICS_1)
     print(Style.RESET_ALL)
@@ -703,7 +702,7 @@ def river_discovery():
     choose_your_path('      Go with the men? or Stay with Ishmel? (G/S)\n',
                      'g',
                      's',
-                     'Invalid choice, Please choose.',
+                     '      Invalid choice, Please choose.',
                      go_with_men,
                      stay_with_ishmel
                      )
@@ -720,7 +719,7 @@ def stay_with_ishmel():
     choose_your_path('      Press Enter to tie off the boat.\n',
                      '',
                      '',
-                     'Invalid choice, Press Enter.',
+                     '      Invalid choice, Press Enter.',
                      arrive_plantation,
                      arrive_plantation
                      )
@@ -742,8 +741,8 @@ def go_with_men():
         You jump across onto the mens boat and Ishmel tosses a small parcel
         over to you, it contains {narrative.FISH_CAUGHT} fish.
 
-        'Your catch, you boys will need to eat, see you around {name}.
-        And be careful, it's a jungle out there.'
+        'Your catch, you will all need to eat, see you around {name}.
+        And be careful... it's a jungle out there.'
 
         he then proceeds to laugh hysterically.
         """)
@@ -751,7 +750,7 @@ def go_with_men():
             choose_your_path('      Board the boat or Wait here? (B/W)\n',
                              'b',
                              'w',
-                             'Invalid choice, Please choose.',
+                             '      Invalid choice, Please choose.',
                              board_boat,
                              wait_on_mechanics
                              )
@@ -761,7 +760,7 @@ def go_with_men():
             choose_your_path('      Board the boat or Wait here? (B/W)\n',
                              'b',
                              'w',
-                             'Invalid choice, Please choose.',
+                             '      Invalid choice, Please choose.',
                              board_boat,
                              wait_on_mechanics
                              )
@@ -771,7 +770,7 @@ def go_with_men():
         choose_your_path('      Board the boat or Wait here? (B/W)\n',
                          'b',
                          'w',
-                         'Invalid choice, Please choose.',
+                         '      Invalid choice, Please choose.',
                          board_boat,
                          wait_on_mechanics
                          )
@@ -790,7 +789,7 @@ def board_boat():
     choose_your_path('      Leave Africa and go home or Continue? (L/C)\n',
                      'l',
                      'c',
-                     'Invalid choice, Please choose.',
+                     '      Invalid choice, Please choose.',
                      leave_africa,
                      arrive_plantation_mechanics
                      )
@@ -809,7 +808,7 @@ def wait_on_mechanics():
     choose_your_path('      Leave Africa and go home or Continue? (L/C)\n',
                      'l',
                      'c',
-                     'Invalid choice, Please choose.',
+                     '      Invalid choice, Please choose.',
                      decide_to_leave,
                      arrive_plantation_mechanics
                      )
@@ -830,7 +829,7 @@ def decide_to_leave():
     choose_your_path('      Press Enter to go to the town.\n',
                      '',
                      '',
-                     'Invalid choice, Press Enter.',
+                     '      Invalid choice, Press Enter.',
                      leave_africa,
                      leave_africa
                      )
@@ -849,7 +848,7 @@ def leave_africa():
     choose_your_path('      View the Menu or quit game? (M/Q)\n',
                      'm',
                      'q',
-                     'Invalid choice, Please choose.',
+                     '      Invalid choice, Please choose.',
                      menu,
                      game_over_alive
                      )
@@ -870,7 +869,7 @@ def arrive_plantation():
     choose_your_path('      View the Menu or quit game? (M/Q)\n',
                      'm',
                      'q',
-                     'Invalid choice, Please choose.',
+                     '      Invalid choice, Please choose.',
                      menu,
                      game_over_alive
                      )
@@ -889,7 +888,7 @@ def arrive_plantation_mechanics():
     choose_your_path('      View the Menu or quit game? (M/Q)\n',
                      'm',
                      'q',
-                     'Invalid choice, Please choose.',
+                     '      Invalid choice, Please choose.',
                      menu,
                      game_over_alive
                      )
