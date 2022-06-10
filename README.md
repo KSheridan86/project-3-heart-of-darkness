@@ -1,11 +1,11 @@
-# Heart of Darkness, Choose your own adventure Game
+# Heart of Darkness
+## Choose your own adventure Game
 
-For my **Portfolio 3 Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created a command line Six Nations Rugby Quiz game.  Just like the tournament itself there are six sections for each of the countries.  The user will be asked 5 random questions in each section relating to a particular country.  The user can select whichever country they want to start with and work their way through each country, when their score will be totalled and they will find out if they made the leaderboard or not!   
+
 
 Link to the deployed site is [here](https://heart-of-darkness.herokuapp.com/). 
 
-
-![alt text](./docs/pp3%20mockup.png)
+![alt text](./docs/pp3-mockup-resized.png)
 
 -----
 
@@ -13,6 +13,7 @@ Link to the deployed site is [here](https://heart-of-darkness.herokuapp.com/).
 
 - [Description](#description)
 - [Theme](#theme)
+- [Objective](#objective)
 - [Features](#features)
 - [Testing](#testing)
 - [Technologies](#technologies)
@@ -23,10 +24,26 @@ Link to the deployed site is [here](https://heart-of-darkness.herokuapp.com/).
 
 ------
 
+## Description
 
-## Objective?
-To deliver a command line quiz that is interactive and fun for the users, particularly anyone who likes Rugby   
- 
+For this project I took inspiration from one of my favourite books, [Heart of Darkness](https://en.wikipedia.org/wiki/Heart_of_Darkness) by Joseph Conrad.
+This book was also the inspiration for Francis Ford Coppola's movie [Apocalypse Now](https://www.imdb.com/title/tt0078788/).   
+I borrowed the broad outline of a European man arriving into the Congo Jungle at the height of the Belgian colonial conquest.
+From this starting point I created an original character and wrote an original story with multiple forks in the road for the user to navigate as they try to make it to the end of the story alive. I included a couple of games into the narrative so depending on the choices the user makes they may come across a game to play.
+
+
+## Objective
+To deliver a command line game that is interactive, engaging and fun for the users.   
+
+
+## Theme
+The theme for this project was largely constrained by the criteria that it had to be a command line interface application.
+I still felt the need to incorporate a little design into the project.
+So i chose a jungle scene to serve as the background image, centered the terminal inside the image, centered the 'Enter the Jungle?' button
+above the terminal and colored the button a deep green.
+
+During the story/game I also incorporated multiple examples of ascii art. From creating text art for the title page and act markers to images of a 
+boat, a revolver, a fish among others to try and impart a sense of the jungle in the user.
 
 [Back to the Top](#table-of-contents)
 
@@ -39,32 +56,26 @@ To deliver a command line quiz that is interactive and fun for the users, partic
 ### From a User's Perspective
 As a user it is important: 
 
-1. That it is easy to follow the game. 
-2. To understand the rules of the game. 
-3. To understand how to start the game. 
-4. To choose a game they want to play.
-5. To quit the game if they want to. 
-6. To answer questions and receive a result. 
-7. To view their scores. 
-8. To view the leaderboard.  
+1. That it is easy to follow the story.  
+3. That they understand how to start and play through the story/game. 
+5. They can quit if they want to.  
 
 
 ### Users Fulfilment
 
-1.  The game is laid out clearly so the user knows immediately what to do.  A welcome message is provided prompting the user for their name. 
-2.  Rules are available for the user to view. 
-3.  Clear instructions are given on how to start the game.
-4.  Clear instructions are given on how to select the country they want to play. 
-5.  The user is given opportunities to quit the game throughout. 
-6.  The user is asked multiple choice questions which they can answer by typing in a letter and are given a result as to whether they answered correctly or incorrectly. 
-7.  After each section ends the user is shown how they scored in that round. 
-8.  At the end of the game and if they quit the user is given the option to view the leaderboard. 
-
+1.  The site is laid out clearly so the user knows immediately what to do. 
+2.  An introduction message is provided explaining the narrative. 
+3.  Clear instructions are given on how to play the game.
+4.  The user is asked if they would like to begin the story.
+5.  Prompts are provided every time the user must make a decision. 
+5.  The user is given the opportunity to quit the story/game in each of the three acts. 
+7.  After each act ends the user is asked if they would like to continue.. 
 
 -----
 ## UX 
 
-While I did want to give the game a bit of design it was designed minimally as the instructions were to produce a command line interface application.  Minimal styles were achieved by adding a background image, adding a mock screen and color to the 'Let's Play' button. 
+I wanted to give the story/game a bit of styling to add to the overall user experience. I kept it minimal as the instructions were to produce a command line interface application. By adding a background image, a border around the terminal and color to the 'Enter the Jungle?' button I
+believe that the finished styles work well with the theme of the story/game and the project.
 
 
 [Back to the Top](#table-of-contents)
@@ -72,23 +83,40 @@ While I did want to give the game a bit of design it was designed minimally as t
 
 ### Python Logic
 
-I created a flow chart using draw.io.  The chart gave me an idea of the flow of the game and how the game would progress, paying particular attention to user input and validation.  While some changes have been made to the quiz since drafting this flow chart it was extrememly beneficial in how the quiz was put together.  
+I created a flow chart using draw.io. The chart gave me an idea of the flow of the game and how the game would progress, bu keeping this close to hand as i built the project it was possible to
 
 <p align="center"><img src="./docs/pp3%20flow%20chart.jpg"></p>
 
 
+-------
+## Features
 
-### Existing Features
+### Home Page
 
-- Startup Display
+![Home-page](./docs/Home-Screen.png)
+
+### Intro/How to play
+
+![How-to-play](./docs/How-to-play.png)
+### Act 1,2 & 3 headings
+
+![Headings](./docs/Act-1.png)
+### Menu
+
+![Menu](./docs/menu.png)
+### Colored text
+
+![Home-page](./docs/colored-text.png)
+### Games
 
 
-- Rules
+![russian-roulette](./docs/Russian-roulette.png)
+![fishing](./docs/Fishing-game.png)
+### Multiple Game over screens, One after completing/quitting without dying and one after you die. 
 
 
-
-- Quit Screen 
-  - There are two quit screens:
+![game-over-1](./docs/Game-over-alive.png)
+![game-over-2](./docs/Game-over-dead.png)
 
 
 [Back to the Top](#table-of-contents)
@@ -104,14 +132,6 @@ Design was limited for this project as it was primiarily command line based.  I 
 
 [Back to the Top](#table-of-contents)
 
-
-#### Colors 
-
-![alt text](https://res.cloudinary.com/rockymiss/image/upload/v1649959187/rugby/palette_tknwbh.png)
-
-- #000 - Terminal Screen background
-- #013220 - Let's Play Button
-- #2F4F4F - Border on Let's Play Button
 
 -----
 ## Future Implementation 
@@ -212,7 +232,7 @@ I carried out manual testing to ensure that game flow was correct, everything wa
 
 ### Browser Testing
 
-The Website has been tested on Google Chrome, Microsoft Edge, Safari and Opera.   On all browsers testing was as expected.  
+The Website has been tested on Google Chrome, Microsoft Edge, and Firefox. On all browsers testing was as expected.  
 
 
 [Back to the Top](#table-of-contents)
@@ -222,17 +242,13 @@ The Website has been tested on Google Chrome, Microsoft Edge, Safari and Opera. 
 
 The three python files were tested using [Pep8 Validation](http://pep8online.com/checkresult). 
 
+No errors were found.
 
 ###  Result: Chrome Lighthouse 
 
 I used Chrome Lighthouse to test Performance on the website. 
 
-<details open>
-<summary>Lighthouse Validation</summary> 
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649960816/rugby/lighthouse_ajquwx.png"></p>
-
-</details>
-<br>
+<p align="center"><img src="./docs/lighthouse.png"></p>
 
 
 [Back to the Top](#table-of-contents)
