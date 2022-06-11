@@ -170,25 +170,69 @@ def menu():
     '''
     clear_terminal()
     print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-    # 9
     print(Style.RESET_ALL)
     print(narrative.MENU)
     option = input('')
     str(option)
     if option == '1':
         clear_terminal()
-        txt_effect(intro_text)
-        choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
-                         'v',
-                         's',
-                         "      This is not a valid selection....Try again.",
-                         volunteer,
-                         stay_with_boat
-                         )
+        print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+        print(Style.RESET_ALL)
+        print(narrative.ACT_1)
+        option = input('')
+        str(option)
+        if option == '1':
+            clear_terminal()
+            txt_effect(intro_text)
+            choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
+                             'v',
+                             's',
+                             "This is not a valid selection....Try again.",
+                             volunteer,
+                             stay_with_boat
+                             )
+        elif option == '2':
+            stay_with_boat()
+        elif option == '3':
+            volunteer()
+        elif option == '4':
+            dont_fight_sven()
+        else:
+            menu()
     elif option == '2':
-        act_two()
+        clear_terminal()
+        print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+        print(Style.RESET_ALL)
+        print(narrative.ACT_2)
+        option = input('')
+        str(option)
+        if option == '1':
+            act_two()
+        elif option == '2':
+            visit_bar()
+        elif option == '3':
+            make_report()
+        else:
+            menu()
     elif option == '3':
-        act_three()
+        clear_terminal()
+        print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+        print(Style.RESET_ALL)
+        print(narrative.ACT_3)
+        option = input('')
+        str(option)
+        if option == '1':
+            act_three()
+        elif option == '2':
+            river_discovery()
+        elif option == '3':
+            go_with_men()
+        elif option == '4':
+            board_boat()
+        else:
+            menu()
+    elif option == 'q':
+        game_over_alive()
     else:
         menu()
 
