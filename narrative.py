@@ -208,14 +208,10 @@ RUN_FROM_GAME = '''
         You push off the table and make a run for the door.\n
         One of the goons opens fire.
 '''
-SURVIVE = '''
-                Click
-                Empty, I was alive!\n
-        '''
+
 MANS_TURN = '   The man raises the gun to his head and pulls the trigger.\n'
 
 ROULETTE_VICTORY = '''
-        BANG!!\n
         The man's head explodes and for a split second the whole room glows red
         as the light shines through a fine mist of his blood.
         His goons creep forward and stare into the empty space that only a

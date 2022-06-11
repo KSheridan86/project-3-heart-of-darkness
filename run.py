@@ -45,15 +45,24 @@ def russian_roulette():
         Checks if you're dead and continues accordingly.
         '''
         clear_terminal()
-        print(Fore.LIGHTBLUE_EX + ascii_art.GUN)
+        print(Fore.LIGHTBLUE_EX + ascii_art.CLICK)
+        time.sleep(2)
         print(Style.RESET_ALL)
         shot = barrel[random.randrange(0, len(barrel))]
         barrel.remove(shot)
         if shot == kill_shot:
-            txt_effect('        Kill shot, You are dead!')
+            clear_terminal()
+            print(Fore.RED + ascii_art.BANG)
+            time.sleep(2)
             game_over()
         else:
-            txt_effect(narrative.SURVIVE)
+            clear_terminal()
+            print(Fore.LIGHTBLUE_EX + ascii_art.EMPTY)
+            time.sleep(2)
+            clear_terminal()
+            print(Fore.LIGHTBLUE_EX + ascii_art.SURVIVE)
+            print(Style.RESET_ALL)
+            time.sleep(2)
             comp_shot()
 
     def comp_shot():
@@ -63,11 +72,22 @@ def russian_roulette():
         shot = barrel[random.randrange(0, len(barrel))]
         barrel.remove(shot)
         txt_effect(narrative.MANS_TURN)
+        time.sleep(2)
+        clear_terminal()
+        print(Fore.LIGHTBLUE_EX + ascii_art.CLICK)
         if shot == kill_shot:
+            time.sleep(2)
+            clear_terminal()
+            print(Fore.RED + ascii_art.BANG)
+            print(Style.RESET_ALL)
             time.sleep(2)
             survive_game_enter_office()
         else:
-            txt_effect('            Click, Empty, my turn...\n')
+            time.sleep(2)
+            clear_terminal()
+            print(Fore.LIGHTBLUE_EX + ascii_art.EMPTY)
+            time.sleep(2)
+            print(Style.RESET_ALL)
             pull_trigger()
 
     pull_trigger()
@@ -165,8 +185,7 @@ def pass_functions_into_choices(text, function):
 
 def menu():
     '''
-    Calls the main menu after you have died once during the game.
-    lets the user play the game from any point forward.
+    Calls the main menu lets the user play the game from any point forward.
     '''
     clear_terminal()
     print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
@@ -241,11 +260,11 @@ def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
     # '''
-    # for character in text_to_print:
-    #     sys.stdout.write(character)
-    #     sys.stdout.flush()
-    #     time.sleep(0.05)
-    print(text_to_print)
+    for character in text_to_print:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    # print(text_to_print)
 
 
 def clear_terminal():
@@ -320,6 +339,8 @@ def begin_game():
                          )
     elif answer == 'n':
         game_over()
+    elif answer == 'menu':
+        menu()
     else:
         print("This is not a valid selection....Try again.")
         begin_game()
