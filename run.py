@@ -137,6 +137,8 @@ def choose_your_path(choice,
         function_1(*args)
     elif choice == option_2:
         function_2()
+    elif choice == 'menu':
+        menu()
     else:
         print(Fore.YELLOW + error)
         choose_your_path(choice,
@@ -167,6 +169,8 @@ def menu():
     lets the user play the game from any point forward.
     '''
     clear_terminal()
+    print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+    # 9
     print(Style.RESET_ALL)
     print(narrative.MENU)
     option = input('')
@@ -193,11 +197,11 @@ def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
     # '''
-    for character in text_to_print:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    # print(text_to_print)
+    # for character in text_to_print:
+    #     sys.stdout.write(character)
+    #     sys.stdout.flush()
+    #     time.sleep(0.05)
+    print(text_to_print)
 
 
 def clear_terminal():

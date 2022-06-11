@@ -13,8 +13,7 @@ TITLE_TEXT = '''
         relocating your family to a school on a rubber plantation.
         It's government work with a large salary, generous pension
         with room and board included.
-
-        Travelling ahead of the rest of your family to make the
+        You are travelling ahead of the rest of your family to make the
         arrangements for your new life.
 
         What's the worst that could happen?
@@ -28,8 +27,12 @@ TITLE_TEXT = '''
         Follow the on screen prompts to make your decisions.
         Just type the letter of your choosen path and press Enter.
 
-        Your choices will directly dictate the outcome of the story.
+        If you would like to quit the game or jump to another part of
+        the story you can do this by typing 'menu' and pressing Enter
+        any time you are asked to decide the path of the story and this
+        will take you directly to the main menu.
 
+        Your choices will directly dictate the outcome of the story.
         Good luck.
 '''
 
@@ -542,14 +545,42 @@ END = '''
 
 '''
 MENU = '''
-        Where would you like to go?
+                        Where would you like to go?
 
-                . Act 1
+                                . Act 1
 
-                . Act 2
+                                . Act 2
 
-                . Act 3
+                                . Act 3
 
-        Type 1, 2 or 3 followed by Enter to choose.
+                                . Quit
+
+                        Type 1, 2, 3 or Quit followed by Enter to choose.
 
 '''
+
+ACT_1 = '''
+                        Which choice would you like to start with?
+
+                             1. Volunteer or Stay on boat?
+
+                             2. Escape boat or Stay to help?
+
+                             3. Get angry or Stay calm?
+
+                             4. Bourbon or Water?
+'''
+
+print(narrative.ACT_1)
+option = input('')
+str(option)
+if option == '1':
+    clear_terminal()
+    txt_effect(intro_text)
+    choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
+                     'v',
+                     's',
+                     "      This is not a valid selection....Try again.",
+                     volunteer,
+                     stay_with_boat
+                     )
