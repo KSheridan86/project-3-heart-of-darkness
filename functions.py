@@ -14,6 +14,7 @@ from colorama import init
 from colorama import Fore, Style
 import narrative
 import ascii_art
+import menu
 init()
 
 
@@ -160,7 +161,7 @@ def choose_your_path(choice,
     elif choice == option_2:
         function_2()
     elif choice == 'menu':
-        menu()
+        menu.menu()
     else:
         print(Fore.YELLOW + error)
         choose_your_path(choice,
@@ -185,79 +186,79 @@ def pass_functions_into_choices(text, function):
     function()
 
 
-def menu():
-    '''
-    Calls the main menu lets the user play the game from any point forward.
-    '''
-    clear_terminal()
-    print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-    print(Style.RESET_ALL)
-    print(narrative.MENU)
-    option = input('')
-    str(option)
-    if option == '1':
-        clear_terminal()
-        print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-        print(Style.RESET_ALL)
-        print(narrative.ACT_1)
-        option = input('')
-        str(option)
-        if option == '1':
-            clear_terminal()
-            txt_effect(intro_text)
-            choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
-                             'v',
-                             's',
-                             "This is not a valid selection....Try again.",
-                             volunteer,
-                             stay_with_boat
-                             )
-        elif option == '2':
-            stay_with_boat()
-        elif option == '3':
-            volunteer()
-        elif option == '4':
-            dont_fight_sven()
-        else:
-            menu()
-    elif option == '2':
-        clear_terminal()
-        print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-        print(Style.RESET_ALL)
-        print(narrative.ACT_2)
-        option = input('')
-        str(option)
-        if option == '1':
-            act_two()
-        elif option == '2':
-            visit_bar()
-        elif option == '3':
-            make_report()
-        else:
-            menu()
-    elif option == '3':
-        clear_terminal()
-        print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-        print(Style.RESET_ALL)
-        print(narrative.ACT_3)
-        option = input('')
-        str(option)
-        if option == '1':
-            act_three()
-        elif option == '2':
-            river_discovery()
-        elif option == '3':
-            go_with_men()
-        elif option == '4':
-            board_boat()
-        else:
-            menu()
-    elif option == 'q':
-        game_over_alive()
-    else:
-        print('This is an invalid selection....Please try again...')
-        time.sleep(2)
-        menu()
+# def menu():
+#     '''
+#     Calls the main menu lets the user play the game from any point forward.
+#     '''
+#     clear_terminal()
+#     print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+#     print(Style.RESET_ALL)
+#     print(narrative.MENU)
+#     option = input('')
+#     str(option)
+#     if option == '1':
+#         clear_terminal()
+#         print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+#         print(Style.RESET_ALL)
+#         print(narrative.ACT_1)
+#         option = input('')
+#         str(option)
+#         if option == '1':
+#             clear_terminal()
+#             txt_effect(intro_text)
+#             choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
+#                              'v',
+#                              's',
+#                              "This is not a valid selection....Try again.",
+#                              volunteer,
+#                              stay_with_boat
+#                              )
+#         elif option == '2':
+#             stay_with_boat()
+#         elif option == '3':
+#             volunteer()
+#         elif option == '4':
+#             dont_fight_sven()
+#         else:
+#             menu()
+#     elif option == '2':
+#         clear_terminal()
+#         print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+#         print(Style.RESET_ALL)
+#         print(narrative.ACT_2)
+#         option = input('')
+#         str(option)
+#         if option == '1':
+#             act_two()
+#         elif option == '2':
+#             visit_bar()
+#         elif option == '3':
+#             make_report()
+#         else:
+#             menu()
+#     elif option == '3':
+#         clear_terminal()
+#         print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
+#         print(Style.RESET_ALL)
+#         print(narrative.ACT_3)
+#         option = input('')
+#         str(option)
+#         if option == '1':
+#             act_three()
+#         elif option == '2':
+#             river_discovery()
+#         elif option == '3':
+#             go_with_men()
+#         elif option == '4':
+#             board_boat()
+#         else:
+#             menu()
+#     elif option == 'q':
+#         game_over_alive()
+#     else:
+#         print('This is an invalid selection....Please try again...')
+#         time.sleep(2)
+#         menu()
 
 
 def txt_effect(text_to_print):
@@ -291,7 +292,7 @@ def game_over():
                      'y',
                      'n',
                      "      This is not a valid selection....Try again.",
-                     menu,
+                     menu.menu,
                      end_story
                      )
 
@@ -306,7 +307,7 @@ def game_over_alive():
                      'y',
                      'n',
                      "      This is not a valid selection....Try again.",
-                     menu,
+                     menu.menu,
                      end_story
                      )
 
@@ -343,7 +344,7 @@ def begin_game():
     elif answer == 'n':
         game_over_alive()
     elif answer == 'menu':
-        menu()
+        menu.menu()
     else:
         print("This is not a valid selection....Try again.")
         begin_game()
@@ -359,9 +360,6 @@ time.sleep(.5)
 name = input('  Please enter your name to continue.......').capitalize()
 while not name or len(name) > 50:
     name = input(narrative.NAME_VALIDATION_ERROR).capitalize()
-# while not len(name) < 50:
-#     name = input('''    Ooops too long, Max of 50 characters...\n
-#     Please enter your name to continue....\n''').capitalize()
 
 
 intro_text = f"""

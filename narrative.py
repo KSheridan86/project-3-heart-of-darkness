@@ -38,8 +38,8 @@ TITLE_TEXT = '''
 
         If you would like to quit the game or jump to another part of
         the story you can do this by typing 'menu' and pressing Enter
-        any time you are asked to decide the path of the story and this
-        will take you directly to the main menu.
+        any time you are asked to decide the path of the story.
+        This will take you directly to the main menu.
 
         Your choices will directly dictate the outcome of the story.
         Good luck.
