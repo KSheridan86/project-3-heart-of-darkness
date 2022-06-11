@@ -193,9 +193,8 @@ ENTER_ROOM = '''
         A wiry man sits alone at a round table in the middle of the room.\n
 '''
 GAMBLE = '''
-        SNAP!\n
-        The door is locked behind you and it's only then you realize
-        that there are two other men in the room.
+        The door is locked behind you and it's only then that you realize,
+        there are two other men in the room.
         Both of whom look a lot like the man at the table.
         Small, wispy, caucasian.
         With eyes that looked like they belonged to a hungry fox not a man.\n
@@ -337,19 +336,15 @@ REFUSE_FISHING = '''
 
         You fall into a deep sleep the moment your head touches the pillow.
         Immediatlely dreaming of happier times back home. . . . .
-        .   .   .   .   .   .   .   .   .   .   .   .   .   .
-        . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        .......wake up....................wake.....
-        up.................Wake Up....................
-        .............HelloOoOo........WAKE UP.............
+
+'''
+AWAKE = '''
 
         It's Ishmel....
 
-        "Hello.........yes, i'm awake...."
-
-        "Come up here please, there are some men you should talk to."
-
+        "Come up here please, there are some men you should talk to."\n
 '''
+
 TALK_TO_ISHMEL = '''
         You explain the whole situation to Ishmel.
         He's more than happy to take you to the rubber plantation, he even
