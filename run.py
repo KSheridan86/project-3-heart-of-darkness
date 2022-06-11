@@ -264,11 +264,11 @@ def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
     # '''
-    # for character in text_to_print:
-    #     sys.stdout.write(character)
-    #     sys.stdout.flush()
-    #     time.sleep(0.05)
-    print(text_to_print)
+    for character in text_to_print:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    # print(text_to_print)
 
 
 def clear_terminal():

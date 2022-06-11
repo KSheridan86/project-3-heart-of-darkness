@@ -336,6 +336,24 @@ The website was deployed to heroku by doing the following:
 
 ## Credits 
 
+I have to credit Joseph Conrad, his book 'Heart of Darkness' gave me the idea and location for this story.
+
+I have only used one image for the background. this was sourced here: https://www.ambardcusa.org/congo_jungle_ctt/
+
+I sourced ascii_art from three places.
+- 1: http://www.patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+  This site allowed me to input text and have it generated as ascii art.
+
+- 2: https://emojicombos.com
+
+  Library of emoji art.
+
+- 3: https://asciiart.website/index.php
+
+  Library of ascii art
+
+All of the code base and the story is my work.
 
 
 
