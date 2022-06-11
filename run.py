@@ -45,24 +45,23 @@ def russian_roulette():
         Checks if you're dead and continues accordingly.
         '''
         clear_terminal()
-        print(Fore.LIGHTBLUE_EX + ascii_art.CLICK)
-        time.sleep(2)
+        print(Fore.LIGHTBLACK_EX + ascii_art.CLICK)
+        time.sleep(1.5)
         print(Style.RESET_ALL)
         shot = barrel[random.randrange(0, len(barrel))]
         barrel.remove(shot)
         if shot == kill_shot:
             clear_terminal()
             print(Fore.RED + ascii_art.BANG)
-            time.sleep(2)
             game_over()
         else:
             clear_terminal()
-            print(Fore.LIGHTBLUE_EX + ascii_art.EMPTY)
-            time.sleep(2)
+            print(Fore.LIGHTGREEN_EX + ascii_art.EMPTY)
+            time.sleep(1.5)
             clear_terminal()
-            print(Fore.LIGHTBLUE_EX + ascii_art.SURVIVE)
+            print(Fore.CYAN + ascii_art.SURVIVE)
             print(Style.RESET_ALL)
-            time.sleep(2)
+            time.sleep(1.5)
             comp_shot()
 
     def comp_shot():
@@ -72,22 +71,25 @@ def russian_roulette():
         shot = barrel[random.randrange(0, len(barrel))]
         barrel.remove(shot)
         txt_effect(narrative.MANS_TURN)
-        time.sleep(2)
+        time.sleep(1.5)
         clear_terminal()
-        print(Fore.LIGHTBLUE_EX + ascii_art.CLICK)
+        print(Fore.LIGHTBLACK_EX + ascii_art.CLICK)
         if shot == kill_shot:
-            time.sleep(2)
+            time.sleep(1.5)
             clear_terminal()
             print(Fore.RED + ascii_art.BANG)
             print(Style.RESET_ALL)
-            time.sleep(2)
+            time.sleep(1.5)
             survive_game_enter_office()
         else:
-            time.sleep(2)
+            time.sleep(1.5)
             clear_terminal()
-            print(Fore.LIGHTBLUE_EX + ascii_art.EMPTY)
-            time.sleep(2)
+            print(Fore.LIGHTGREEN_EX + ascii_art.EMPTY)
+            time.sleep(1.5)
+            clear_terminal()
+            print(Fore.CYAN + ascii_art.YOUR_TURN)
             print(Style.RESET_ALL)
+            time.sleep(1.5)
             pull_trigger()
 
     pull_trigger()
@@ -253,6 +255,8 @@ def menu():
     elif option == 'q':
         game_over_alive()
     else:
+        print('This is an invalid selection....Please try again...')
+        time.sleep(2)
         menu()
 
 
@@ -260,11 +264,11 @@ def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
     # '''
-    for character in text_to_print:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    # print(text_to_print)
+    # for character in text_to_print:
+    #     sys.stdout.write(character)
+    #     sys.stdout.flush()
+    #     time.sleep(0.05)
+    print(text_to_print)
 
 
 def clear_terminal():
@@ -320,7 +324,6 @@ def begin_game():
     Asks you to begin the game, prints the first
     paragraph and loads the first choice.
     '''
-
     print()
     answer = input(
         Fore.YELLOW + '    Would you like to start the story? (Y/N)\n').lower()
@@ -338,7 +341,7 @@ def begin_game():
                          stay_with_boat
                          )
     elif answer == 'n':
-        game_over()
+        game_over_alive()
     elif answer == 'menu':
         menu()
     else:
@@ -355,8 +358,10 @@ print(Style.RESET_ALL)
 time.sleep(.5)
 name = input('  Please enter your name to continue.......').capitalize()
 while not name or len(name) > 50:
-    name = input('''    Ooops too long, Max of 50 characters...\n
-    Please enter your name to continue....\n''').capitalize()
+    name = input(narrative.NAME_VALIDATION_ERROR).capitalize()
+# while not len(name) < 50:
+#     name = input('''    Ooops too long, Max of 50 characters...\n
+#     Please enter your name to continue....\n''').capitalize()
 
 
 intro_text = f"""

@@ -39,8 +39,7 @@ To deliver a command line game that is interactive, engaging and fun for the use
 ## Theme
 The theme for this project was largely constrained by the criteria that it had to be a command line interface application.
 I still felt the need to incorporate a little design into the project.
-So i chose a jungle scene to serve as the background image, centered the terminal inside the image, centered the 'Enter the Jungle?' button
-above the terminal and colored the button a deep green.
+So i chose a jungle scene to serve as the background image, centered the terminal inside the image, gave the terminal a border with rounded edges, centered the 'Enter the Jungle?' button above the terminal and colored the button a deep green.
 
 During the story/game I also incorporated multiple examples of ascii art. From creating text art for the title page and act markers to images of a 
 boat, a revolver, a fish among others to try and impart a sense of the jungle in the user.
@@ -85,7 +84,7 @@ believe that the finished styles work well with the theme of the story/game and 
 
 I created a flow chart using draw.io. The chart gave me an idea of the flow of the game and how the game would progress, bu keeping this close to hand as i built the project it was possible to
 
-<p align="center"><img src="./docs/pp3%20flow%20chart.jpg"></p>
+![Flow-of-game](./docs/pp3%20flow%20chart.jpg)
 
 
 -------
@@ -117,17 +116,6 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 ![game-over-1](./docs/Game-over-alive.png)
 ![game-over-2](./docs/Game-over-dead.png)
-
-
-[Back to the Top](#table-of-contents)
-
-
-### Data Model
-
-
-### Design  
-
-Design was limited for this project as it was primiarily command line based.  I did however want to give it some element of design so positioned the terminal to the center of the screen to make it look like a tv screen.  I added a background image of a stadium which complimented the quiz.   
 
 
 [Back to the Top](#table-of-contents)
@@ -348,7 +336,6 @@ The website was deployed to heroku by doing the following:
 
 ## Credits 
 
-Initially I looked at Portfolio 3 Projects on the Code Institute Slack Community to get some inspiration.  I found two quiz apps created by [Mike](https://github.com/MikeR94) and [Dave](https://github.com/DaveyJH).  Those two were massive quizzes to follow and honestly a bit overwhelming.  It was from Mike's readme that I saw the blog from [Brock Byrd](https://brockbyrdd.medium.com/).  Like Mike I followed this and primarily used the setup of Brock's questions and answers from this blog.  From this I slowly built my app using the resources mentioned above I made it my own.  I actually really enjoyed putting this together.  
 
 
 

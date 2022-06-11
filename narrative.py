@@ -1,9 +1,18 @@
 """
 This is the narrative for the story
 """
+
 GO_FISHING = False
 FISH_CAUGHT = 0
 TOTAL_DRINKS = 1
+
+
+NAME_VALIDATION_ERROR = '''
+        Input Invalid
+        Your name must be shorter than 50 characters.
+        Your name cannot be left empty.\n
+        Please enter your name to continue.....
+'''
 
 TITLE_TEXT = '''
         This story takes place in the early 20th century.
@@ -541,59 +550,59 @@ END = '''
 
 '''
 MENU = '''
-                        Where would you like to go?
+                    Where would you like to go?
 
-                                . Act 1
+                    . Act 1
 
-                                . Act 2
+                    . Act 2
 
-                                . Act 3
+                    . Act 3
 
-                                . Quit
+                    . Quit
 
-                        Type 1, 2, 3 or Q followed by Enter to choose.
+                    Type 1, 2, 3 or Q followed by Enter to choose.
 
 '''
 
 ACT_1 = '''
-                Which choice would you like to start with?
+                    Which choice would you like to start with?
 
-                1. Volunteer or Stay on boat?
+                    1. Volunteer or Stay on boat?
 
-                2. Escape boat or Stay to help?
+                    2. Escape boat or Stay to help?
 
-                3. Get angry or Stay calm?
+                    3. Get angry or Stay calm?
 
-                4. Bourbon or Water?
+                    4. Bourbon or Water?
 
-                Chose incorrectly and you will be redirected to
-                the main menu.
+                    Chose incorrectly and you will be redirected to
+                    the main menu.
 '''
 
 ACT_2 = '''
-                Which choice would you like to start with?
+                    Which choice would you like to start with?
 
-                1. Go to the office or the bar?
+                    1. Go to the office or the bar?
 
-                2. Drink or Gamble?
+                    2. Drink or Gamble?
 
-                3. Talk to the girl??
+                    3. Talk to the girl??
 
-                Chose incorrectly and you will be redirected to
-                the main menu.
+                    Chose incorrectly and you will be redirected to
+                    the main menu.
 '''
 
 ACT_3 = '''
-                Which choice would you like to start with?
+                    Which choice would you like to start with?
 
-                1. Begin Act 3?
+                    1. Begin Act 3?
 
-                2. Stay with Ishmel or go with the men?
+                    2. Stay with Ishmel or go with the men?
 
-                3. Board the old boat or wait for the men?
+                    3. Board the old boat or wait for the men?
 
-                4. Leave Africa or go to the plantation?
+                    4. Leave Africa or go to the plantation?
 
-                Chose incorrectly and you will be redirected to
-                the main menu.
+                    Chose incorrectly and you will be redirected to
+                    the main menu.
 '''
