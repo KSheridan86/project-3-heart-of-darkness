@@ -12,7 +12,7 @@ from colorama import init
 from colorama import Fore, Style
 import narrative
 import ascii_art
-import menu
+from menu import menu
 init()
 
 
@@ -171,7 +171,7 @@ def choose_your_path(choice,
     elif choice == option_2:
         function_2()
     elif choice == 'menu':
-        menu.menu()
+        menu()
     else:
         print(Fore.YELLOW + error)
         choose_your_path(choice,
@@ -201,11 +201,11 @@ def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
     # '''
-    for character in text_to_print:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    # print(text_to_print)
+    # for character in text_to_print:
+    #     sys.stdout.write(character)
+    #     sys.stdout.flush()
+    #     time.sleep(0.05)
+    print(text_to_print)
 
 
 def clear_terminal():
@@ -229,7 +229,7 @@ def game_over():
                      'y',
                      'n',
                      "      This is not a valid selection....Try again.",
-                     menu.menu,
+                     menu,
                      end_story
                      )
 
@@ -244,7 +244,7 @@ def game_over_alive():
                      'y',
                      'n',
                      "      This is not a valid selection....Try again.",
-                     menu.menu,
+                     menu,
                      end_story
                      )
 
@@ -267,12 +267,9 @@ def sleep_animation():
         for i in range(2):
             for zzz in ascii_art.z_list:
                 for j in range(2):
-                    # num = 2
-                    # while num > 0:
                     clear_terminal()
                     print(Fore.LIGHTGREEN_EX + Style.DIM)
                     print(zzz)
-                    # num -= 1
                     time.sleep(.5)
         clear_terminal()
         print(Fore.LIGHTGREEN_EX + Style.DIM)
@@ -304,7 +301,7 @@ def begin_game():
     elif answer == 'n':
         game_over_alive()
     elif answer == 'menu':
-        menu.menu()
+        menu()
     else:
         print("This is not a valid selection....Try again.")
         begin_game()

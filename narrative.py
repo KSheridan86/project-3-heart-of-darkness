@@ -519,8 +519,8 @@ ARRIVE_PLANTATION = '''
 ARRIVE_PLANTATION_MECHANICS = '''
         The ride up river drifted past in a daze, none of us spoke
         we just stared straight ahead lost in thought.
-        Before you realize it you're docking at the plantation pier.\n
-        You step down onto the pier and immediately feel relieved.
+        Before realizing it we were docking at the plantation pier.\n
+        Stepping down onto the pier you immediately feel relieved.
         This place is huge, factories with bunkhouses line the river bank.
         The main street cuts straight through the town square equipped with
         a sheriff's office, a library, a court house, a small market store,
