@@ -1,9 +1,7 @@
 """
-Choose your own adventure game.
 This is a choose your own adventure game, based loosely on the theme's of
-the movie Apocalypse now and the inspiration for that movie, the book
-The Heart of Darkness by Joseph Conrad.
-You must navigate your way down the Congo river at the height of the
+the book The Heart of Darkness by Joseph Conrad.
+You must navigate your way up the Congo river at the height of the
 Belgian colonial conquest.
 """
 import time
@@ -19,10 +17,17 @@ init()
 
 
 # Games
+# Russian roulette and Fishing, these can be played depending
+# on the users choices.
+##############################################################################
 
 def russian_roulette():
     '''
     Loads the russian roulette game
+    Generates a virtual 6 shot revolver randomly assigns the bullet
+    to a chamber and spins the cylinder.
+    User fires first, then a randomly generated computer shot,
+    keeps taking shots until someone is dead.
     '''
     barrel = [1, 2, 3, 4, 5, 6]
     clear_terminal()
@@ -98,15 +103,19 @@ def russian_roulette():
 
 def fish_game():
     """
-    Placeholder docstring to remove errors
+    Randomly generates a number between 1 and 100 then checks
+    to see if that number is prime.
+    1 in 4 chance it is
+    A prime number = a caught fish.
     """
     clear_terminal()
     print(Fore.BLUE + ascii_art.FISH)
     narrative.GO_FISHING = True
     print(Style.RESET_ALL)
+
     num = random.randrange(1, 100)
 
-    def start_fish(num):
+    def cast_line(num):
         if num == 1:
             return True
         else:
@@ -115,7 +124,7 @@ def fish_game():
                     return False
         return True
 
-    answer = start_fish(num)
+    answer = cast_line(num)
 
     if answer:
         narrative.FISH_CAUGHT += 1
@@ -140,7 +149,8 @@ def fish_game():
                          )
 
 
-# Function used throughout the story
+# Functions used throughout the story.
+###############################################################################
 
 
 def choose_your_path(choice,
@@ -174,11 +184,12 @@ def choose_your_path(choice,
     print(Style.RESET_ALL)
 
 
-def pass_functions_into_choices(text, function):
+def pass_args_in(text, function):
     '''
     Starts the game.
     Streamlines the process of calling the choose_your_path
-    function, you can pass arguments instead of having to write
+    function (above), arguments are passed to one of the functions inside the
+    choose_your_path function instead of having to write
     individual functions to pass in for every fork in the path.
     '''
     clear_terminal()
@@ -201,6 +212,7 @@ def clear_terminal():
     '''
     Call this function to clear
     the terminal of the last section.
+    It resets colorama colors also.
     '''
     print(Style.RESET_ALL)
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -208,7 +220,7 @@ def clear_terminal():
 
 def game_over():
     '''
-    Prints a game over graphic
+    Prints a game over graphic and offers options to start again.
     '''
     time.sleep(2)
     clear_terminal()
@@ -224,7 +236,7 @@ def game_over():
 
 def game_over_alive():
     '''
-    Prints a game over graphic
+    Prints a game over graphic and offers options to start again.
     '''
     clear_terminal()
     print(Fore.BLUE + ascii_art.GAME_OVER_ALIVE)
@@ -243,6 +255,29 @@ def end_story():
     '''
     print(Style.RESET_ALL)
     print('     Thanks for playing, come back soon.')
+
+
+def sleep_animation():
+    '''
+    Recreates a basic animation by looping over ascii art characters
+    printing them and after a time delay clearing the console and
+    printing the next character
+    '''
+    for wake in ascii_art.w_list:
+        for i in range(2):
+            for zzz in ascii_art.z_list:
+                for j in range(2):
+                    # num = 2
+                    # while num > 0:
+                    clear_terminal()
+                    print(Fore.LIGHTGREEN_EX + Style.DIM)
+                    print(zzz)
+                    # num -= 1
+                    time.sleep(.5)
+        clear_terminal()
+        print(Fore.LIGHTGREEN_EX + Style.DIM)
+        print(wake)
+        time.sleep(.25)
 
 
 def begin_game():
@@ -275,7 +310,11 @@ def begin_game():
         begin_game()
 
 
-# Start story
+# Start of the story.
+# Name is required to continue, must be less than 50 characters.
+# All characters are accepted.
+###############################################################################
+
 print(Fore.LIGHTYELLOW_EX)
 print(ascii_art.TITLE)
 print(Fore.GREEN + Style.BRIGHT)
@@ -298,14 +337,18 @@ intro_text = f"""
 
         """
 
-
+# Below are the functions that dictate the path of the game.
+# They have been laid out in the order they appear in the game.
+###############################################################################
 # Act 1
-# Act 1 Fork 1
+# Fork 1
 
 
 def volunteer():
     '''
-    Runs the volunteer selection
+    Runs if the user chooses to volunteer, this is the first
+    fork of the game, both options have a valid path through
+    to act 2.
     '''
     clear_terminal()
     print(Fore.GREEN + ascii_art.JUNGLE)
@@ -315,7 +358,7 @@ def volunteer():
                      'a',
                      'c',
                      '      Invalid choice, please choose...',
-                     pass_functions_into_choices,
+                     pass_args_in,
                      dont_fight_sven,
                      narrative.FIGHT_SVEN,
                      game_over
@@ -324,7 +367,9 @@ def volunteer():
 
 def dont_fight_sven():
     '''
-    placeholder
+    Runs if the user chooses to stay calm, it's the correct choice,
+    the user survives to make another choice.
+    Prints text, loads question.
     '''
     clear_terminal()
     txt_effect(narrative.DONT_FIGHT)
@@ -332,19 +377,21 @@ def dont_fight_sven():
                      'w',
                      'b',
                      '      Invalid choice, please choose a drink.',
-                     pass_functions_into_choices,
+                     pass_args_in,
                      drink_bourbon,
                      narrative.WATER,
                      game_over
                      )
 
 
-# Act 1 Fork 1.1
+# Act 1
+# Fork 1.1
 
 
 def drink_bourbon():
     """
-    Placeholder docstring to remove errors
+    Runs if the user chooses bourbon, it's the correct choice,
+    user survives and is prompted to press enter to begin act 2.
     """
     clear_terminal()
     txt_effect(narrative.BOURBON)
@@ -356,12 +403,14 @@ def drink_bourbon():
                      act_two
                      )
 
-# Act 1 Fork 2
+# Act 1
+# Fork 2
 
 
 def stay_with_boat():
     """
-    Placeholder docstring to remove errors
+    Runs if the user chooses to stay with the boat.
+    This is the wrong path, user is killed.
     """
     clear_terminal()
     txt_effect(narrative.STAY)
@@ -370,7 +419,7 @@ def stay_with_boat():
                 's',
                 'e',
                 '       Invalid choice, please choose a path.',
-                pass_functions_into_choices,
+                pass_args_in,
                 escape_boat,
                 narrative.STAY_ON_BOAT,
                 game_over
@@ -381,7 +430,8 @@ def stay_with_boat():
 
 def escape_boat():
     """
-    Placeholder docstring to remove errors
+    Runs if the user chooses to escape into the jungle.
+    For this particular fork it's the path to survival.
     """
     clear_terminal()
     txt_effect(narrative.ESCAPE_BOAT)
@@ -400,7 +450,8 @@ def escape_boat():
 
 def act_two():
     """
-    Placeholder docstring to remove errors
+    Begins act two and asks you to choose
+    your next move.
     """
     clear_terminal()
     print(Fore.LIGHTYELLOW_EX)
@@ -415,12 +466,14 @@ def act_two():
                      visit_bar
                      )
 
-#  Chapter 2 Fork 1
+# Act 2
+# Fork 1
 
 
 def visit_office():
     """
-    Placeholder docstring to remove errors
+    Runs when you visit the office, leads you to talk to the girl
+    and begin act 3.
     """
     clear_terminal()
     txt_effect(narrative.LEAVE_BAR_AFTER_DRINK)
@@ -436,7 +489,9 @@ def visit_office():
 
 def make_report():
     '''
-    placeholder docstring
+    Prints the conversation between you and the girl
+    in different colors and asks you to press Enter
+    to begin act three.
     '''
     clear_terminal()
     txt_effect(narrative.TALK_TO_GIRL_1)
@@ -457,7 +512,8 @@ def make_report():
 
 def enter_office():
     '''
-    directly enter the office
+    Prints the text to directly enter the office and prompts the user
+    to press Enter to speak to the girl.
     '''
     clear_terminal()
     txt_effect(narrative.PORT_OFFICE)
@@ -470,12 +526,14 @@ def enter_office():
                      )
 
 
-#  Act 2 Fork 2
+# Act 2
+# Fork 2
 
 
 def visit_bar():
     """
-    Placeholder docstring to remove errors
+    Prints the text for entering the bar and asks you to choose
+    your next move.
     """
     clear_terminal()
     print(Fore.LIGHTWHITE_EX + ascii_art.SALOON)
@@ -491,7 +549,7 @@ def visit_bar():
 
 def refuse_drink_visit_office():
     """
-    Placeholder docstring to remove errors
+    Cut off from the bar you must go and speak to the girl in the offices.
     """
     clear_terminal()
     txt_effect(narrative.CUT_OFF)
@@ -509,7 +567,8 @@ def refuse_drink_visit_office():
 
 def enter_room():
     '''
-    creepy room
+    If you choose to gamble this function gives you the opportunity
+    to change your mind.
     '''
     clear_terminal()
     txt_effect(narrative.ENTER_ROOM)
@@ -524,7 +583,9 @@ def enter_room():
 
 def gamble_room():
     '''
-    get ready to play
+    If you choose to gamble this function gives you the opportunity
+    to change your mind. But unlike the function above 'enter_room()'
+    this is a trick question, if you change your mind you die.
     '''
     clear_terminal()
     print(Fore.LIGHTRED_EX + ascii_art.SNAP)
@@ -534,7 +595,7 @@ def gamble_room():
                      'r',
                      'p',
                      '      Invalid choice, please choose your next move.',
-                     pass_functions_into_choices,
+                     pass_args_in,
                      russian_roulette,
                      narrative.RUN_FROM_GAME,
                      game_over
@@ -543,7 +604,9 @@ def gamble_room():
 
 def survive_game_enter_office():
     '''
-    directly enter the office after russian roulette
+    This function runs if you survive the russian roulette game.
+    Your challenger is dead and you go straight to the offices
+    to speak to the girl.
     '''
     clear_terminal()
     txt_effect(narrative.ROULETTE_VICTORY + narrative.PORT_OFFICE)
@@ -560,7 +623,8 @@ def survive_game_enter_office():
 
 def drink():
     """
-    Placeholder docstring to remove errors
+    This runs if you enter the bar and go straight for a drink.
+    printing the text and loading the next choice.
     """
     clear_terminal()
     txt_effect(narrative.DRINK_AT_BAR)
@@ -568,7 +632,7 @@ def drink():
                      'n',
                      'y',
                      '      Invalid choice, Another drink?',
-                     pass_functions_into_choices,
+                     pass_args_in,
                      another_drink,
                      narrative.LEAVE_BAR_AFTER_DRINK,
                      visit_office
@@ -577,7 +641,9 @@ def drink():
 
 def another_drink():
     """
-    Placeholder docstring to remove errors
+    This runs if the user requests another drink.
+    It checks if they have had more than 3 drinks already, if not
+    you get another, if so you are refused and sent to the office.
     """
     clear_terminal()
     print(Style.RESET_ALL)
@@ -594,7 +660,7 @@ def another_drink():
                          'n',
                          'y',
                          '      Invalid choice, Another drink?',
-                         pass_functions_into_choices,
+                         pass_args_in,
                          another_drink,
                          narrative.LEAVE_BAR_AFTER_DRINK,
                          visit_office
@@ -603,11 +669,13 @@ def another_drink():
 
 ##############################################################################
 # Act 3
+# First section of act 3 contains the fishing game.
 
 
 def act_three():
     """
-    Placeholder docstring to remove errors
+    Begins act three, user meets Ishmel and is prompted to press
+    Enter to speak to him.
     """
     clear_terminal()
     print(Fore.LIGHTYELLOW_EX)
@@ -625,7 +693,9 @@ def act_three():
 
 def join_ishmel():
     """
-    Placeholder docstring to remove errors
+    The natural progression of act three is to board Ishmels boat
+    but here the user is introduced to him and offered the chance to
+    play the fishing game.
     """
     clear_terminal()
     print(Fore.LIGHTRED_EX + ascii_art.BOAT)
@@ -640,12 +710,10 @@ def join_ishmel():
                      )
 
 
-# Act three
-# Fork 1
-
 def go_fish():
     """
-    Placeholder docstring to remove errors
+    Runs if the user chooses to play the fish game.
+    prints an acceptance message and starts the game.
     """
     clear_terminal()
     print(Fore.BLUE + ascii_art.FISH)
@@ -660,17 +728,17 @@ def go_fish():
                      )
 
 
-# Act 3
-# Fork 2
-
-
 def sleep():
     """
-    Placeholder docstring to remove errors
+    Runs if the user refuses to play the fishing game.
+    User goes to sleep, a small sleep animation runs
+    and then they are awoken by Ishmel with news.
     """
     clear_terminal()
     txt_effect(narrative.REFUSE_FISHING)
+    time.sleep(1)
     sleep_animation()
+    print(Style.RESET_ALL)
     txt_effect(narrative.AWAKE)
     choose_your_path('      Press Enter to speak with the men.\n',
                      '',
@@ -680,15 +748,18 @@ def sleep():
                      river_discovery
                      )
 
-
+###############################################################################
 # Act three
-# Fork 1 & 2 lead here so from here out i will refer to
-# the forks as 1 or 2 and disregard the first fork
+# The first section of act 3 leads here whatever choice is made,
+# So the forks begin here and ultimately lead to 1 of 2 possible endings.
+###############################################################################
 
 
 def river_discovery():
     '''
-    placeholder docstring
+    Following the natural progression you will always meet the
+    mechanics from the plantation.
+    Here the user meets them and is asked to join them.
     '''
     clear_terminal()
     txt_effect(
@@ -713,7 +784,10 @@ def river_discovery():
 
 def stay_with_ishmel():
     '''
-    placeholder docstring
+    Runs if the user chooses to stay with Ishmel.
+    It's a short cut to the end of the story.
+    Bypassing an arm of narrative with the mechanics and heading
+    straight to the plantation for a happy ending.
     '''
     clear_terminal()
     txt_effect(narrative.PLANTATION_WITH_ISHMEL)
@@ -731,7 +805,8 @@ def stay_with_ishmel():
 
 def go_with_men():
     '''
-    placeholder docstring
+    This runs if the user leaves Ishmel and goes in search of
+    the original boat and crew.
     '''
     clear_terminal()
     if narrative.GO_FISHING:
@@ -779,7 +854,8 @@ def go_with_men():
 
 def board_boat():
     '''
-    placeholder docstring
+    Runs when the user comes across the original boat
+    and boards it to find out what happened.
     '''
     clear_terminal()
     txt_effect(narrative.BOARD_BOAT)
@@ -798,7 +874,8 @@ def board_boat():
 
 def wait_on_mechanics():
     '''
-    placeholder docstring
+    Runs when the user comes across the original boat
+    and refuses to board, just waits for the mechanics.
     '''
     clear_terminal()
     txt_effect(narrative.WAIT_ON_MECHANICS_1)
@@ -820,7 +897,9 @@ def wait_on_mechanics():
 
 def decide_to_leave():
     '''
-    placeholder docstring
+    Runs if the user chooses to leave Ishmel and visit the old boat.
+    User will be given an option to give up their plans and go
+    home to europe.
     '''
     txt_effect(narrative.DECIDE_TO_LEAVE_1)
     print(Fore.LIGHTCYAN_EX)
@@ -838,7 +917,9 @@ def decide_to_leave():
 
 def leave_africa():
     '''
-    placeholder docstring
+    Runs if the user chooses to give up and go home.
+    Prints the final chapter and offers the user the choice
+    to visit the main menu or quit.
     '''
     clear_terminal()
     txt_effect(narrative.LEAVE_AFRICA)
@@ -859,7 +940,8 @@ def leave_africa():
 
 def arrive_plantation():
     '''
-    placeholder docstring
+    This runs if the user stays with Ishmel and arrives in the
+    plantation for a happy ending.
     '''
     clear_terminal()
     txt_effect(narrative.ARRIVE_PLANTATION)
@@ -878,7 +960,10 @@ def arrive_plantation():
 
 def arrive_plantation_mechanics():
     '''
-    placeholder docstring
+    This runs after the user journeys with the mechanics and
+    arrives at the plantation.
+    Prints the end of game message, it's a little more neutral
+    than the happy ending.
     '''
     clear_terminal()
     txt_effect(narrative.ARRIVE_PLANTATION_MECHANICS)
@@ -893,24 +978,3 @@ def arrive_plantation_mechanics():
                      menu,
                      game_over_alive
                      )
-
-
-def sleep_animation():
-    '''
-    fuck off
-    '''
-    
-    for wake in ascii_art.w_list:
-        print(Fore.LIGHTGREEN_EX + Style.DIM)
-        for i in range(2):
-            for zzz in ascii_art.z_list:
-                num = 2
-                while num > 0:
-                    clear_terminal()
-                    print(Fore.LIGHTGREEN_EX + Style.DIM)
-                    print(zzz)
-                    num -= 1
-                    time.sleep(.4)
-        clear_terminal()
-        print(wake)
-        time.sleep(.3)

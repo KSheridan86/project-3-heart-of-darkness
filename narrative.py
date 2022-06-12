@@ -335,7 +335,8 @@ REFUSE_FISHING = '''
         "There's a bunk set up down below, I'll wake you for dinner"
 
         You fall into a deep sleep the moment your head touches the pillow.
-        Immediatlely dreaming of happier times back home. . . . .
+        Immediatlely dreaming of happier times back home. . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 '''
 AWAKE = '''
