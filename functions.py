@@ -46,7 +46,7 @@ def russian_roulette():
         Checks if you're dead and continues accordingly.
         '''
         clear_terminal()
-        print(Fore.LIGHTBLACK_EX + ascii_art.CLICK)
+        print(Fore.CYAN + ascii_art.CLICK)
         time.sleep(1.5)
         print(Style.RESET_ALL)
         shot = barrel[random.randrange(0, len(barrel))]
@@ -57,7 +57,7 @@ def russian_roulette():
             game_over()
         else:
             clear_terminal()
-            print(Fore.LIGHTGREEN_EX + ascii_art.EMPTY)
+            print(Fore.CYAN + ascii_art.EMPTY)
             time.sleep(1.5)
             clear_terminal()
             print(Fore.CYAN + ascii_art.SURVIVE)
@@ -74,7 +74,7 @@ def russian_roulette():
         txt_effect(narrative.MANS_TURN)
         time.sleep(1.5)
         clear_terminal()
-        print(Fore.LIGHTBLACK_EX + ascii_art.CLICK)
+        print(Fore.CYAN + ascii_art.CLICK)
         if shot == kill_shot:
             time.sleep(1.5)
             clear_terminal()
@@ -85,7 +85,7 @@ def russian_roulette():
         else:
             time.sleep(1.5)
             clear_terminal()
-            print(Fore.LIGHTGREEN_EX + ascii_art.EMPTY)
+            print(Fore.CYAN + ascii_art.EMPTY)
             time.sleep(1.5)
             clear_terminal()
             print(Fore.CYAN + ascii_art.YOUR_TURN)
@@ -186,81 +186,6 @@ def pass_functions_into_choices(text, function):
     function()
 
 
-# def menu():
-#     '''
-#     Calls the main menu lets the user play the game from any point forward.
-#     '''
-#     clear_terminal()
-#     print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-#     print(Style.RESET_ALL)
-#     print(narrative.MENU)
-#     option = input('')
-#     str(option)
-#     if option == '1':
-#         clear_terminal()
-#         print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-#         print(Style.RESET_ALL)
-#         print(narrative.ACT_1)
-#         option = input('')
-#         str(option)
-#         if option == '1':
-#             clear_terminal()
-#             txt_effect(intro_text)
-#             choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
-#                              'v',
-#                              's',
-#                              "This is not a valid selection....Try again.",
-#                              volunteer,
-#                              stay_with_boat
-#                              )
-#         elif option == '2':
-#             stay_with_boat()
-#         elif option == '3':
-#             volunteer()
-#         elif option == '4':
-#             dont_fight_sven()
-#         else:
-#             menu()
-#     elif option == '2':
-#         clear_terminal()
-#         print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-#         print(Style.RESET_ALL)
-#         print(narrative.ACT_2)
-#         option = input('')
-#         str(option)
-#         if option == '1':
-#             act_two()
-#         elif option == '2':
-#             visit_bar()
-#         elif option == '3':
-#             make_report()
-#         else:
-#             menu()
-#     elif option == '3':
-#         clear_terminal()
-#         print(Fore.LIGHTYELLOW_EX + ascii_art.MENU)
-#         print(Style.RESET_ALL)
-#         print(narrative.ACT_3)
-#         option = input('')
-#         str(option)
-#         if option == '1':
-#             act_three()
-#         elif option == '2':
-#             river_discovery()
-#         elif option == '3':
-#             go_with_men()
-#         elif option == '4':
-#             board_boat()
-#         else:
-#             menu()
-#     elif option == 'q':
-#         game_over_alive()
-#     else:
-#         print('This is an invalid selection....Please try again...')
-#         time.sleep(2)
-#         menu()
-
-
 def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
@@ -268,7 +193,7 @@ def txt_effect(text_to_print):
     for character in text_to_print:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.0005)
     # print(text_to_print)
 
 
@@ -602,7 +527,8 @@ def gamble_room():
     get ready to play
     '''
     clear_terminal()
-    print(ascii_art.SNAP)
+    print(Fore.LIGHTRED_EX + ascii_art.SNAP)
+    print(Style.RESET_ALL)
     txt_effect(narrative.GAMBLE)
     choose_your_path('      Do you Run or Play? (R/P)\n',
                      'r',
@@ -744,7 +670,7 @@ def sleep():
     """
     clear_terminal()
     txt_effect(narrative.REFUSE_FISHING)
-    sleep_scene()
+    sleep_animation()
     txt_effect(narrative.AWAKE)
     choose_your_path('      Press Enter to speak with the men.\n',
                      '',
@@ -754,107 +680,6 @@ def sleep():
                      river_discovery
                      )
 
-
-def sleep_scene():
-    '''
-    placeholder
-    '''
-    time.sleep(1)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.W)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.WA)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.WAK)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.WAKE)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.Z)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.ZZZ)
-    time.sleep(.75)
-    clear_terminal()
-    print(ascii_art.WAKE_UP)
 
 # Act three
 # Fork 1 & 2 lead here so from here out i will refer to
@@ -1070,4 +895,22 @@ def arrive_plantation_mechanics():
                      )
 
 
-# pass_functions_into_choices(narrative.TITLE_TEXT, begin_game)
+def sleep_animation():
+    '''
+    fuck off
+    '''
+    
+    for wake in ascii_art.w_list:
+        print(Fore.LIGHTGREEN_EX + Style.DIM)
+        for i in range(2):
+            for zzz in ascii_art.z_list:
+                num = 2
+                while num > 0:
+                    clear_terminal()
+                    print(Fore.LIGHTGREEN_EX + Style.DIM)
+                    print(zzz)
+                    num -= 1
+                    time.sleep(.4)
+        clear_terminal()
+        print(wake)
+        time.sleep(.3)

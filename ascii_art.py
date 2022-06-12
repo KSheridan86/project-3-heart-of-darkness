@@ -1,9 +1,7 @@
 """
 This is all the ascii art used throughout the game.
 """
-# from colorama import init
-# from colorama import Fore, Style
-# init()
+
 TITLE = '''
                       ██╗  ██╗███████╗ █████╗ ██████╗ ████████╗
                       ██║  ██║██╔════╝██╔══██╗██╔══██╗╚══██╔══╝
@@ -315,6 +313,7 @@ W = '''
 
 
 
+
                           ██╗    ██╗
                           ██║    ██║
                           ██║ █╗ ██║
@@ -323,6 +322,7 @@ W = '''
                            ╚══╝╚══╝
 '''
 WA = '''
+
 
 
 
@@ -337,6 +337,7 @@ WAK = '''
 
 
 
+
                           ██╗    ██╗ █████╗ ██╗  ██╗
                           ██║    ██║██╔══██╗██║ ██╔╝
                           ██║ █╗ ██║███████║█████╔╝
@@ -348,6 +349,7 @@ WAKE = '''
 
 
 
+
                           ██╗    ██╗ █████╗ ██╗  ██╗███████╗
                           ██║    ██║██╔══██╗██║ ██╔╝██╔════╝
                           ██║ █╗ ██║███████║█████╔╝ █████╗
@@ -356,6 +358,7 @@ WAKE = '''
                            ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
 '''
 WAKE_UP = '''
+
 
 
 
@@ -384,19 +387,5 @@ SNAP = '''
                     ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝
 '''
 
-# print(Fore.LIGHTBLACK_EX + Style.DIM + SNAP)
-# print(Fore.LIGHTBLACK_EX + Style.NORMAL + SNAP)
-# print(Fore.LIGHTBLACK_EX + SNAP)
-# print(Fore.LIGHTBLACK_EX + Style.BRIGHT + SNAP)
-# print(Fore.LIGHTWHITE_EX + Style.DIM + SNAP)
-# print(Fore.LIGHTWHITE_EX + Style.NORMAL + SNAP)
-# print(Fore.LIGHTWHITE_EX + Style.BRIGHT + SNAP)
-# print(Fore.LIGHTYELLOW_EX + Style.DIM + SNAP)
-# print(Fore.LIGHTYELLOW_EX + Style.NORMAL + SNAP)
-# print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + SNAP)
-# print(Fore.YELLOW + Style.DIM + SNAP)
-# print(Fore.YELLOW + Style.NORMAL + SNAP)
-# print(Fore.YELLOW + Style.BRIGHT + SNAP)
-# print(Fore.LIGHTGREEN_EX + Style.DIM + SNAP)
-# print(Fore.LIGHTGREEN_EX + Style.NORMAL + SNAP)
-# print(Fore.LIGHTGREEN_EX + Style.BRIGHT + SNAP)
+w_list = (W, WA, WAK, WAKE, WAKE_UP)
+z_list = (Z, ZZ, ZZZ)

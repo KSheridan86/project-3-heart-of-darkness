@@ -7,8 +7,6 @@ from colorama import Fore, Style
 import narrative
 import functions
 import ascii_art
-
-
 init()
 
 
