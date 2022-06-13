@@ -1,5 +1,6 @@
 """
-This is the narrative for the story
+This is the narrative for the story.
+all text sections of the game are held here.
 """
 
 GO_FISHING = False

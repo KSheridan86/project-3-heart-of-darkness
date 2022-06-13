@@ -3,7 +3,7 @@
 
 
 
-Link to the deployed site is [here](https://heart-of-darkness.herokuapp.com/). 
+Live site available [here](https://heart-of-darkness.herokuapp.com/). 
 
 ![alt text](./docs/pp3-mockup-resized.png)
 
@@ -39,10 +39,9 @@ To deliver a command line game that is interactive, engaging and fun for the use
 ## Theme
 The theme for this project was largely constrained by the criteria that it had to be a command line interface application.
 I still felt the need to incorporate a little design into the project.
-So i chose a jungle scene to serve as the background image, centered the terminal inside the image, gave the terminal a border with rounded edges, centered the 'Enter the Jungle?' button above the terminal and colored the button a deep green.
+So i chose a jungle scene to serve as the background image, moved the terminal inside the image, gave the terminal a border with rounded edges, rounded the 'Enter the Jungle?' button above the terminal and colored the button a deep green.
 
-During the story/game I also incorporated multiple examples of ascii art. From creating text art for the title page and act markers to images of a 
-boat, a revolver, a fish among others to try and impart a sense of the jungle in the user.
+During the story/game I also incorporated multiple examples of ascii art. From creating text art for the title page and act markers to images of a boat, a revolver, a fish among others to try and impart a sense of the jungle in the user.
 
 [Back to the Top](#table-of-contents)
 
@@ -67,14 +66,13 @@ As a user it is important:
 3.  Clear instructions are given on how to play the game.
 4.  The user is asked if they would like to begin the story.
 5.  Prompts are provided every time the user must make a decision. 
-5.  The user is given the opportunity to quit the story/game in each of the three acts. 
+6.  The user is given the opportunity to quit the story/game with each choice they make. 
 7.  After each act ends the user is asked if they would like to continue.. 
 
 -----
 ## UX 
 
-I wanted to give the story/game a bit of styling to add to the overall user experience. I kept it minimal as the instructions were to produce a command line interface application. By adding a background image, a border around the terminal and color to the 'Enter the Jungle?' button I
-believe that the finished styles work well with the theme of the story/game and the project.
+I wanted to give the story/game a bit of styling to add to the overall user experience. I kept it minimal as the instructions were to produce a command line interface application. By adding a background image, a border around the terminal and color to the 'Enter the Jungle?' button I believe that the finished styles work well with the theme of the story/game and the project.
 
 
 [Back to the Top](#table-of-contents)
@@ -82,7 +80,7 @@ believe that the finished styles work well with the theme of the story/game and 
 
 ### Python Logic
 
-I created a flow chart using draw.io. The chart gave me an idea of the flow of the game and how the game would progress, bu keeping this close to hand as i built the project it was possible to
+I created a flow chart using draw.io. The chart gave me an idea of the flow of the game and how the game would progress, by keeping this close to hand as I built the project it was possible to control the flow of the story without losing sight of the goal.
 
 ![Flow-of-game](./docs/pp3%20flow%20chart.jpg)
 
@@ -91,27 +89,40 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 ## Features
 
 ### Home Page
+  Title and intro quote.
+  Here the user gets prompted to enter thier name to continue.
 
 ![Home-page](./docs/Home-Screen.png)
 
 ### Intro/How to play
+  This page holds a synopsis of what the game is about
+  aswell as instructions on how to play and quit.
 
 ![How-to-play](./docs/How-to-play.png)
 ### Act 1,2 & 3 headings
+  Example of the ascii art used in the headings
 
 ![Headings](./docs/Act-1.png)
 ### Menu
+  Main menu is accesible from nearly anywhere in the game.
+  Use this to quit the game or move around the story as you wish.
 
 ![Menu](./docs/menu.png)
 ### Colored text
+  Colored text was achieved using colorama, a python library.
 
-![Home-page](./docs/colored-text.png)
+![Colored-text](./docs/colored-text.png)
 ### Games
+  Two ganes are available for the user to play
+  neither are mandatory but both are possible in one 
+  pass through the story.
 
+  The games are a basic fishing game and russian roulette a game of chance.
 
 ![russian-roulette](./docs/Russian-roulette.png)
 ![fishing](./docs/Fishing-game.png)
-### Multiple Game over screens, One after completing/quitting without dying and one after you die. 
+### Game Over 
+  Multiple game over screens, One after completing/quitting without dying and one after you die. 
 
 
 ![game-over-1](./docs/Game-over-alive.png)
@@ -123,7 +134,11 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 -----
 ## Future Implementation 
-
+  Given the time i would like to rework the story and make it much bigger.
+  Extra narrative, more games, possibly a black jack game.
+  I would very much like to have the background image change as the user progress' through
+  the story, from jungle scene to boat to saloon to plantation among others.
+  This is beyond my abilities at the moment and not needed for this project.
 
 [Back to the Top](#table-of-contents)
 
@@ -175,7 +190,10 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 ### User Testing
 
-The website was sent to a group of approximately 15 people.  Users found the game easy to work through.  This testing for the most part produced spelling errors and complaints that some of the questions were too hard! 
+The website was sent to a group of approximately 10 people. They found the game easy to work through and enjoyable.
+For the most part this only discovered spelling and grammar errors.
+
+Also the project was posted into the 'peer-code-review' channel on slack and no bugs or issues were reported.
 
 
 ### Manual Testing
@@ -183,36 +201,35 @@ The website was sent to a group of approximately 15 people.  Users found the gam
 I carried out manual testing to ensure that game flow was correct, everything was working as it should and validation caught any errors. 
 
 - Tests carried out: 
-  - Start-up Display - Verify that: 
-    - The logo displays.
-    - The welcome message displays with information on the game.
+  - Home screen - Verify that: 
+    - The Title displays.
+    - The intro quote is printed.
     - The user is prompted for their name.
     - The user can enter their name.
-    - The user gets a warning message if the name is longer than 10 characters. 
-    - The user gets a warning message if the name is just numbers. 
+    - The user gets a warning message if the name is longer than 50 characters. 
     - The user gets a warning message if the name is blank. 
   
-  - Display Rules or Play - Verify that: 
-    - The user is asked if they want to see the rules or play.
-    - The user is prompted to type an "r" to see the rules and "p" to play. 
-    - That warning message appears if anything other than a "p" or "r" is entered by the user. 
-    - That the user is asked to enter "r" or "p" again.  
+  - How to screen - Verify that: 
+    - The introduction narrative prints.
+    - The how to play instructions are printed. 
+    - That the user is asked to enter "y" or "n" to begin.  
   
-  - Rules - Verify that:
-    - If the user types "r" the rules are displayed.
-    - The message is clear to the user on how to play. 
-    - The user is asked if they would like to Play or Quit. 
-    - That the user is prompted to type in "p" to play or "q" to quit. 
-    - That a warning message appears if anything other than a p or q is entered.  
+  - Regular narrative and choices - Verify that:
+    - The story begins and offers the user the choice to choose their path.
+    - That the story progress' as the user wishes. 
+    - That a warning message appears if anything other than the available choices is entered.  
   
-  - Quit Early - Verify that: 
-    - When the user types "q" to quit as above a message displays saying goodbye to the user and pointing out that if they wish to play they can click the Let's Play Button. 
-    - By clicking the Let's Play Button the website is refreshed and the quiz re-starts. 
+  - Menu - Verify that: 
+    - The menu is available from any of the forks in the path.
+    - That the menu works properly, all inputs are correctly validated, warning messages appear and are clear. 
   
-  - Quiz Choices - Verify that: 
-    - If the user types p to play as above in the Rules Section that a list of choices appears to the user. 
-    - That the list displayed contains the correct instructions to the user to proceed. 
-    - That a warning will appear if the player chooses anything other than the six options above. 
+  - Games - Verify that: 
+    - If the user chooses to play a game, the correct game is loaded. 
+    - That the game plays as intended without any errors. 
+    - That any variables altered during the game are accessible later for the corrct purposes.
+
+  - Ascii Art - Verify that:
+    - All ascii art is displayed as intended and the color is correct.
 
 
 [Back to the Top](#table-of-contents)
@@ -221,9 +238,6 @@ I carried out manual testing to ensure that game flow was correct, everything wa
 ### Browser Testing
 
 The Website has been tested on Google Chrome, Microsoft Edge, and Firefox. On all browsers testing was as expected.  
-
-
-[Back to the Top](#table-of-contents)
 
 
 ### Validators 
@@ -236,10 +250,7 @@ No errors were found.
 
 I used Chrome Lighthouse to test Performance on the website. 
 
-<p align="center"><img src="./docs/lighthouse.png"></p>
-
-
-[Back to the Top](#table-of-contents)
+![lighthouse](./docs/lighthouse.png)
 
 
 ### Color Contrast Testing 
@@ -247,18 +258,11 @@ I used Chrome Lighthouse to test Performance on the website.
 I used [a11y](https://https://color.a11y.com/) to test the color contrast on the website which produced no issues. 
 
 
-[Back to the Top](#table-of-contents)
-
-
 ### Issues/Bugs Fixed 
 
-
-**Errors in GitPod**
-
-As I worked in GitPod I used the problems menu constantly.  For the most part the errors were in relation to whitespaces, indentations and two line spacing before functions.  I fixed the errors as I went so when it came to validating my code with the PEP8 validator there were no errors and my code was clean.  
-
-
-### Issues Unresolved
+  Any issues or bugs that were encountered were mainly due to indentation errors spelling mistakes and import mistakes.
+  These were fixed in production as they were found so when it came to validating my code with the PEP8 validator
+  there were no errors and my code was clean.  
 
 
 [Back to the Top](#table-of-contents)

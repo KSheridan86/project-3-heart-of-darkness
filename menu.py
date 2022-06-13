@@ -1,5 +1,5 @@
 '''
-placeholder
+This is the interactive menu used throughout the game.
 '''
 import time
 from colorama import init

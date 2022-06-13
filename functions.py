@@ -27,7 +27,7 @@ def russian_roulette():
     Generates a virtual 6 shot revolver randomly assigns the bullet
     to a chamber and spins the cylinder.
     User fires first, then a randomly generated computer shot,
-    keeps taking shots until someone is dead.
+    keeps taking shots back and forth until someone is dead.
     '''
     barrel = [1, 2, 3, 4, 5, 6]
     clear_terminal()
