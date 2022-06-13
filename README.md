@@ -1,15 +1,18 @@
 # Heart of Darkness
+
 ## Choose your own adventure Game
+------------------------------------
 
 
 
 Live site available [here](https://heart-of-darkness.herokuapp.com/). 
 
-![alt text](./docs/pp3-mockup-resized.png)
+![alt text](./docs/mockup.png)
 
 -----
 
 ## Table of Contents
+--------------------------------------
 
 - [Description](#description)
 - [Theme](#theme)
@@ -25,6 +28,7 @@ Live site available [here](https://heart-of-darkness.herokuapp.com/).
 ------
 
 ## Description
+---------------------------------------
 
 For this project I took inspiration from one of my favourite books, [Heart of Darkness](https://en.wikipedia.org/wiki/Heart_of_Darkness) by Joseph Conrad.
 This book was also the inspiration for Francis Ford Coppola's movie [Apocalypse Now](https://www.imdb.com/title/tt0078788/).   
@@ -33,10 +37,12 @@ From this starting point I created an original character and wrote an original s
 
 
 ## Objective
+----------------------------
 To deliver a command line game that is interactive, engaging and fun for the users.   
 
 
 ## Theme
+-----------------------------
 The theme for this project was largely constrained by the criteria that it had to be a command line interface application.
 I still felt the need to incorporate a little design into the project.
 So i chose a jungle scene to serve as the background image, moved the terminal inside the image, gave the terminal a border with rounded edges, rounded the 'Enter the Jungle?' button above the terminal and colored the button a deep green.
@@ -49,9 +55,11 @@ During the story/game I also incorporated multiple examples of ascii art. From c
 -----
 
 ## User Experience
+---------------------------------
 
 
 ### From a User's Perspective
+------------------------------------
 As a user it is important: 
 
 1. That it is easy to follow the story.  
@@ -60,6 +68,7 @@ As a user it is important:
 
 
 ### Users Fulfilment
+--------------------------------------
 
 1.  The site is laid out clearly so the user knows immediately what to do. 
 2.  An introduction message is provided explaining the narrative. 
@@ -71,6 +80,7 @@ As a user it is important:
 
 -----
 ## UX 
+------
 
 I wanted to give the story/game a bit of styling to add to the overall user experience. I kept it minimal as the instructions were to produce a command line interface application. By adding a background image, a border around the terminal and color to the 'Enter the Jungle?' button I believe that the finished styles work well with the theme of the story/game and the project.
 
@@ -79,6 +89,7 @@ I wanted to give the story/game a bit of styling to add to the overall user expe
 
 
 ### Python Logic
+--------------
 
 I created a flow chart using draw.io. The chart gave me an idea of the flow of the game and how the game would progress, by keeping this close to hand as I built the project it was possible to control the flow of the story without losing sight of the goal.
 
@@ -87,32 +98,48 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 -------
 ## Features
+------------
 
 ### Home Page
+
   Title and intro quote.
   Here the user gets prompted to enter thier name to continue.
 
 ![Home-page](./docs/Home-Screen.png)
 
+---------------------
 ### Intro/How to play
+
   This page holds a synopsis of what the game is about
   aswell as instructions on how to play and quit.
 
 ![How-to-play](./docs/How-to-play.png)
+
+------------------------------
 ### Act 1,2 & 3 headings
+
   Example of the ascii art used in the headings
 
 ![Headings](./docs/Act-1.png)
+
+----------------
 ### Menu
+
   Main menu is accesible from nearly anywhere in the game.
   Use this to quit the game or move around the story as you wish.
 
 ![Menu](./docs/menu.png)
+
+-----------------
 ### Colored text
+
   Colored text was achieved using colorama, a python library.
 
 ![Colored-text](./docs/colored-text.png)
+
+-------------------
 ### Games
+
   Two ganes are available for the user to play
   neither are mandatory but both are possible in one 
   pass through the story.
@@ -121,7 +148,10 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 ![russian-roulette](./docs/Russian-roulette.png)
 ![fishing](./docs/Fishing-game.png)
+
+------------------
 ### Game Over 
+
   Multiple game over screens, One after completing/quitting without dying and one after you die. 
 
 
@@ -134,7 +164,8 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 -----
 ## Future Implementation 
-  Given the time i would like to rework the story and make it much bigger.
+--------------------------
+  Given the time I would like to rework the story and make it much bigger.
   Extra narrative, more games, possibly a black jack game.
   I would very much like to have the background image change as the user progress' through
   the story, from jungle scene to boat to saloon to plantation among others.
@@ -145,6 +176,7 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 -----
 ## Technologies Used 
+---------------------
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
@@ -162,6 +194,7 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 -----
 ## Resources 
+----------------
 
 - [Code Institute](https://codeinstitute.net/ie/)
 - [Slack](https://slack.com/intl/en-ie/) 
@@ -174,6 +207,7 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 
 ## Python Libraries/Modules
+---------------------------
 
 - [Colorama](https://pypi.org/project/colorama/)
 - [Random](https://www.cs.swarthmore.edu/~adanner/cs21/f09/randomlib.php#:~:text=Using%20the%20random%20library&text=The%20random%20module%20provides%20access,the%20basic%20features%20of%20python.)
@@ -187,8 +221,10 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
 -----
 ## Testing
+-------------
 
 ### User Testing
+-----------------
 
 The website was sent to a group of approximately 10 people. They found the game easy to work through and enjoyable.
 For the most part this only discovered spelling and grammar errors.
@@ -197,6 +233,7 @@ Also the project was posted into the 'peer-code-review' channel on slack and no 
 
 
 ### Manual Testing
+--------------------
 
 I carried out manual testing to ensure that game flow was correct, everything was working as it should and validation caught any errors. 
 
@@ -208,21 +245,21 @@ I carried out manual testing to ensure that game flow was correct, everything wa
     - The user can enter their name.
     - The user gets a warning message if the name is longer than 50 characters. 
     - The user gets a warning message if the name is blank. 
-  
+
   - How to screen - Verify that: 
     - The introduction narrative prints.
     - The how to play instructions are printed. 
     - That the user is asked to enter "y" or "n" to begin.  
-  
+
   - Regular narrative and choices - Verify that:
     - The story begins and offers the user the choice to choose their path.
     - That the story progress' as the user wishes. 
     - That a warning message appears if anything other than the available choices is entered.  
-  
+
   - Menu - Verify that: 
     - The menu is available from any of the forks in the path.
     - That the menu works properly, all inputs are correctly validated, warning messages appear and are clear. 
-  
+
   - Games - Verify that: 
     - If the user chooses to play a game, the correct game is loaded. 
     - That the game plays as intended without any errors. 
@@ -236,17 +273,20 @@ I carried out manual testing to ensure that game flow was correct, everything wa
 
 
 ### Browser Testing
+-----------------------
 
 The Website has been tested on Google Chrome, Microsoft Edge, and Firefox. On all browsers testing was as expected.  
 
 
 ### Validators 
+----------------------
 
 The three python files were tested using [Pep8 Validation](http://pep8online.com/checkresult). 
 
 No errors were found.
 
-###  Result: Chrome Lighthouse 
+###  Result: Chrome Lighthouse
+---------------------------------- 
 
 I used Chrome Lighthouse to test Performance on the website. 
 
@@ -254,11 +294,13 @@ I used Chrome Lighthouse to test Performance on the website.
 
 
 ### Color Contrast Testing 
+-----------------------------
 
 I used [a11y](https://https://color.a11y.com/) to test the color contrast on the website which produced no issues. 
 
 
 ### Issues/Bugs Fixed 
+-----------------------------
 
   Any issues or bugs that were encountered were mainly due to indentation errors spelling mistakes and import mistakes.
   These were fixed in production as they were found so when it came to validating my code with the PEP8 validator
@@ -270,9 +312,10 @@ I used [a11y](https://https://color.a11y.com/) to test the color contrast on the
 
 -----
 ## Version Control
-
+----------------------
 
 ### Git and GitHub 
+----------------------
 
 Local repository and IDE used: GitPod & VsCode for early trials of how to move forward.
 Remote repository used: GitHub
@@ -286,7 +329,9 @@ Steps followed:
     - **git commit -m""** to commit the work 
     - **git push** to update work to GitHub 
 
+---------------------------
 ### Deployment to Heroku
+---------------------------
 
 The website was deployed to heroku by doing the following: 
 
@@ -296,49 +341,50 @@ The website was deployed to heroku by doing the following:
 
 3. Give your app a name, choose your region and Click "Create app". 
 
-4. The menus that we are concerned with are "Deploy" and "Settings".  Click on "Settings" First. 
+4. The menus that we are concerned with are "Deploy" and "Settings". Click on "Settings" First. 
 
-5. Copy the contents of the creds.json file.  Insert "CREDS" into the key field and the entire contents of the file into the value field.  The template code provided will use this information to create the file called creds.json and write this data into it as the application is built. 
+5. Buildpacks now need to be added. These install future dependancies that we need outside of the requirements file. The first is python and the second is node.js. Select Python first and then node.js and click save. Make sure they are in this order.
 
-6. Buildpacks now need to be added.  These install future dependancies that we need outside of the requirements file.   The first is python and the second is node.js.  Select Python first and then node.js and click save.  Make sure they are in this order.
+6. Then go to the deploy section and choose your deployment method. To connect with github select github and confirm. 
 
-7. Then go to the deploy section and choose your deployment method.  To connect with github select github and confirm. 
+7. Search for your repo, select it and click connect. 
 
-8. Search for your repo, select it and click connect. 
+8. You can choose to either deploy using automatic deploys which means heroku will rebuild the app everytime you push your changes. For this option choose the branch to deploy and click enable automatic deploys. This can be changed at a later date to manual. Manual deployment deploys the current state of a branch.  
 
-9. You can choose to either deploy using automatic deploys which means heroku will rebuild the app everytime you push your changes.  For this option choose the branch to deploy and click enable automatic deploys.  This can be changed at a later date to manual.  Manual deployment deploys the current state of a branch.  
+9. Click deploy branch. 
 
-10. Click deploy branch. 
-
-11. If successful you should be able to view your deployed app by clicking "View". 
+10. If successful you should be able to view your deployed app by clicking "View". 
     
-
+------------------------
   ### Fork a Repository: 
-        
-    A copy can be made of a repository by forking the repository.  The copy can then be viewed and changed without affecting the original repository. 
-    
-      - From your list of repositories select the repository you want to fork.
-      - On the top of the page to the right had side you will see a fork image.  Click on the button to create a copy. 
+--------------------------
+
+  A copy can be made of a repository by forking the repository.  The copy can then be viewed and changed without affecting the original repository. 
+  
+  - From your list of repositories select the repository you want to fork.
+  - On the top of the page to the right had side you will see a fork image.  Click on the button to create a copy. 
 
 
+-------------------------
+  ### Clone a Repository:
+  ----------------------- 
 
-  ### Clone a Repository: 
-        
-    Cloning this project from GitHub can be done by following these steps: 
-    
-      - From your list of repositories select the repository you want to deploy.
-      - Click on the code tabe. 
-      - Click on the clipboard icon to copy the URL.  
-      - Open Git Bash in your IDE. 
-      - Change the current working directory to the location you want to place the clone. 
-      - Type git clone and paste the copied URL.  
-      - Press enter for the clone to be created. 
+  Cloning this project from GitHub can be done by following these steps: 
+
+  - From your list of repositories select the repository you want to deploy.
+  - Click on the code tabe. 
+  - Click on the clipboard icon to copy the URL.  
+  - Open Git Bash in your IDE. 
+  - Change the current working directory to the location you want to place the clone. 
+  - Type git clone and paste the copied URL.  
+  - Press enter for the clone to be created. 
 
 
 [Back to the Top](#table-of-contents)
 
 
 ## Credits 
+--------------------
 
 I have to credit Joseph Conrad, his book 'Heart of Darkness' gave me the idea and location for this story.
 
@@ -357,6 +403,8 @@ I sourced ascii_art from three places.
 
   Library of ascii art
 
+The quote on the home page is by Friedrich Nietzsche.
+
 All of the code base and the story is my work.
 
 
@@ -366,13 +414,16 @@ All of the code base and the story is my work.
 
 -----
 ## Acknowledegments
+---------------------------
 
-I would like to acknowledge the help and support given by my mentor Chris Quinn, all of the students in my own study group aswell as all the students in the wider Code Institute Slack channels. My cohort Facilitator [Kasia](https://github.com/bezebee) and all of the staff at Code Institute. The sense of comraderie among all of these individuals has helped me to feel at home on my journey to a new career in programming.
+I would like to acknowledge the help and support given by my mentor Chris Quinn, he is never short of good ideas. 
+All of the students in my own study group aswell as all the students in the wider Code Institute Slack channels. My cohort Facilitator [Kasia](https://github.com/bezebee) and all of the staff at Code Institute. The sense of comraderie among all of these individuals has helped me to feel at home on my journey to a new career in programming.
 
 
 [Back to the Top](#table-of-contents)
 
 ## Author Info
+--------------------
 
 - [GitHub](https://github.com/KSheridan86)
 - [Linkedin](https://www.linkedin.com/in/kensheridan86/)

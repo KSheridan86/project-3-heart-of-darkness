@@ -95,7 +95,7 @@ DONT_FIGHT = '''
 BOURBON = """
         \n
         HOLY SHIT! That's strong stuff!\n
-        Thanks i guess, let's keep moving, we might have to find somewhere
+        Thanks I guess, let's keep moving, we might have to find somewhere
         to camp again tonight, this vegetation is so thick, it really
         slows us down. But we should make it to town by the morning...\n
         -------------------------------------------------------------------\n
@@ -212,8 +212,8 @@ GAMBLE = '''
 '''
 RUN_FROM_GAME = '''
         "WAIT WAIT!
-        You have got the wrong idea, i only came in for a quick drink,
-        i have a very serious incident to report to the port office..."\n
+        You have got the wrong idea, I only came in for a quick drink,
+        I have a very serious incident to report to the port office..."\n
         You push off the table and make a run for the door.\n
         One of the goons opens fire.
 '''
@@ -451,7 +451,7 @@ BOARD_BOAT = '''
 BOARD_BOAT_2 = '''
         "There is not alot we can do."
         "We can take the bodies for burial up at the plantation
-        but honestly i want to get out of here, now that we know
+        but honestly I want to get out of here, now that we know
         they are here we can come back tomorrow and sort out this mess.
         But I'm leaving, are you coming?"
 '''
