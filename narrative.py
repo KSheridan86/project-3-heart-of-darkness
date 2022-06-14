@@ -11,7 +11,8 @@ TOTAL_DRINKS = 1
 NAME_VALIDATION_ERROR = '''
         Input Invalid
         Your name must be shorter than 50 characters.
-        Your name cannot be left empty.\n
+        Your name cannot be left empty.
+        You may use numbers or special characters.\n
         Please enter your name to continue.....
 '''
 
@@ -109,23 +110,25 @@ WATER = """
         Soon your vomiting uncontrollably and Sven carries on without you...\n
     """
 
-STAY = """
+STAY_1 = """
         Days pass with no word from the volunteers or the station master...
         Low on food and fresh water, driven mad by the heat the men begin
         to turn on each other.\n
-        BANG!!\n
+    """
+STAY_2 = '''
         A shot rings out across the still water...
         Some of the crew had tried to steal some food for themselves and the
         captain had shot one of them.\n
         Things turned bad very quickly...\n
         The Captain turned the gun on the other crew members but they rushed
         him all at once...\n
-        BANG! BANG BANG!!!\n
+'''
+STAY_3 = '''
         It's hard to see much in the confusion.\n
         The deck is slick with blood and screams fill the dense jungle air.
         Crouched in the corner you realize your beside the pallet of supplies.
 
-    """
+'''
 
 ESCAPE_BOAT = """
         You jump from the deck and run as fast as you can into the undergrowth.
@@ -148,9 +151,7 @@ STAY_ON_BOAT = """
         quite enough of being told what to do.
         In one hand he is holding the captains gun, in the other he's got
         the captain himself, held up by the throat.\n
-        He doesn't wait to hear your objection.....\n
-        BANG!!!\n
-        Game Over, You have Died!
+        He doesn't wait to hear your objection.....
     """
 
 # Act 2

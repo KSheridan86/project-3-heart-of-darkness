@@ -222,7 +222,7 @@ def game_over():
     '''
     Prints a game over graphic and offers options to start again.
     '''
-    time.sleep(2)
+    time.sleep(1.5)
     clear_terminal()
     print(Fore.RED + ascii_art.GAME_OVER)
     choose_your_path('      Would you like to play again? [Y/N]\n',
@@ -410,19 +410,47 @@ def stay_with_boat():
     This is the wrong path, user is killed.
     """
     clear_terminal()
-    txt_effect(narrative.STAY)
+    txt_effect(narrative.STAY_1)
+    time.sleep(.75)
+    clear_terminal()
+    print(Fore.RED + ascii_art.BANG)
+    print(Style.RESET_ALL)
+    time.sleep(.75)
+    clear_terminal()
+    txt_effect(narrative.STAY_2)
+    time.sleep(.75)
+    clear_terminal()
+    print(Fore.RED + ascii_art.BANG_2)
+    time.sleep(.25)
+    clear_terminal()
+    print(Fore.RED + ascii_art.BANG_3)
+    time.sleep(.75)
+    clear_terminal()
+    txt_effect(narrative.STAY_3)
     choose_your_path(
                 '      Stay and help or take what you can and Escape? (S/E)\n',
                 's',
                 'e',
                 '       Invalid choice, please choose a path.',
-                pass_args_in,
-                escape_boat,
-                narrative.STAY_ON_BOAT,
-                game_over
+                dont_escape,
+                escape_boat
                 )
 
 # Act 1 Fork 2.1
+
+
+def dont_escape():
+    """
+    Runs if the user chooses to stay on the boat.
+    For this particular fork it's the path to certain death.
+    """
+    clear_terminal()
+    txt_effect(narrative.STAY_ON_BOAT)
+    time.sleep(1)
+    clear_terminal()
+    print(Fore.RED + ascii_art.BANG)
+    print(Style.RESET_ALL)
+    game_over()
 
 
 def escape_boat():
@@ -746,9 +774,9 @@ def sleep():
                      )
 
 ###############################################################################
-# Act three
-# The first section of act 3 leads here whatever choice is made,
-# So the forks begin here and ultimately lead to 1 of 2 possible endings.
+# Act three                                                                   #
+# The first section of act 3 leads here whatever choice is made,              #
+# So the forks begin here and ultimately lead to 1 of 2 possible endings.     #
 ###############################################################################
 
 
