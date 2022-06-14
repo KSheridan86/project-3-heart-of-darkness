@@ -5,7 +5,7 @@ You must navigate your way up the Congo river at the height of the
 Belgian colonial conquest.
 """
 import time
-import random
+# import random
 import sys
 import os
 from colorama import init
@@ -13,140 +13,8 @@ from colorama import Fore, Style
 import narrative
 import ascii_art
 from menu import menu
+from games import russian_roulette, fish_game
 init()
-
-
-# Games
-# Russian roulette and Fishing, these can be played depending
-# on the users choices.
-##############################################################################
-
-def russian_roulette():
-    '''
-    Loads the russian roulette game
-    Generates a virtual 6 shot revolver randomly assigns the bullet
-    to a chamber and spins the cylinder.
-    User fires first, then a randomly generated computer shot,
-    keeps taking shots back and forth until someone is dead.
-    '''
-    barrel = [1, 2, 3, 4, 5, 6]
-    clear_terminal()
-    print(Fore.LIGHTBLUE_EX + ascii_art.GUN)
-    print(Style.RESET_ALL)
-    txt_effect('    You pick up the revolver and hold it to your head.')
-    kill_shot = random.randrange(1, 6)
-
-    def pull_trigger():
-        '''
-        Asks you to pull the trigger of a six shot revolver.
-        '''
-        trigger = input('\n Press X and then Enter to fire.\n').lower()
-        if trigger == 'x':
-            take_shot()
-        else:
-            print('     Wrong key, try again.')
-
-    def take_shot():
-        '''
-        Checks if you're dead and continues accordingly.
-        '''
-        clear_terminal()
-        print(Fore.CYAN + ascii_art.CLICK)
-        time.sleep(1.5)
-        print(Style.RESET_ALL)
-        shot = barrel[random.randrange(0, len(barrel))]
-        barrel.remove(shot)
-        if shot == kill_shot:
-            clear_terminal()
-            print(Fore.RED + ascii_art.BANG)
-            game_over()
-        else:
-            clear_terminal()
-            print(Fore.CYAN + ascii_art.EMPTY)
-            time.sleep(1.5)
-            clear_terminal()
-            print(Fore.CYAN + ascii_art.SURVIVE)
-            print(Style.RESET_ALL)
-            time.sleep(1.5)
-            comp_shot()
-
-    def comp_shot():
-        '''
-        Fires for the computer and checks whether to continue or not.
-        '''
-        shot = barrel[random.randrange(0, len(barrel))]
-        barrel.remove(shot)
-        txt_effect(narrative.MANS_TURN)
-        time.sleep(1.5)
-        clear_terminal()
-        print(Fore.CYAN + ascii_art.CLICK)
-        if shot == kill_shot:
-            time.sleep(1.5)
-            clear_terminal()
-            print(Fore.RED + ascii_art.BANG)
-            print(Style.RESET_ALL)
-            time.sleep(1.5)
-            survive_game_enter_office()
-        else:
-            time.sleep(1.5)
-            clear_terminal()
-            print(Fore.CYAN + ascii_art.EMPTY)
-            time.sleep(1.5)
-            clear_terminal()
-            print(Fore.CYAN + ascii_art.YOUR_TURN)
-            print(Style.RESET_ALL)
-            time.sleep(1.5)
-            pull_trigger()
-
-    pull_trigger()
-
-
-def fish_game():
-    """
-    Randomly generates a number between 1 and 100 then checks
-    to see if that number is prime.
-    1 in 4 chance it is
-    A prime number = a caught fish.
-    """
-    clear_terminal()
-    print(Fore.BLUE + ascii_art.FISH)
-    narrative.GO_FISHING = True
-    print(Style.RESET_ALL)
-
-    num = random.randrange(1, 100)
-
-    def cast_line(num):
-        if num == 1:
-            return True
-        else:
-            for i in range(2, num):
-                if num % i == 0:
-                    return False
-        return True
-
-    answer = cast_line(num)
-
-    if answer:
-        narrative.FISH_CAUGHT += 1
-        print('     You caught a Fish!!\n')
-        print(f"    You now have {narrative.FISH_CAUGHT} fish in your bucket.")
-        choose_your_path('\n    Keep Fishing? (Y/N)\n',
-                         'y',
-                         'n',
-                         '      Invalid choice, Keep Fishing?',
-                         fish_game,
-                         sleep
-                         )
-    else:
-        print('     No luck, try again?\n')
-        print(f"    You have caught {narrative.FISH_CAUGHT} fish.\n")
-        choose_your_path('      Keep trying? (Y/N)\n',
-                         'y',
-                         'n',
-                         '      Invalid choice, Keep trying?',
-                         fish_game,
-                         sleep
-                         )
 
 
 # Functions used throughout the story.
@@ -201,11 +69,11 @@ def txt_effect(text_to_print):
     '''
     This prints all of the text slowly.
     # '''
-    for character in text_to_print:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    # print(text_to_print)
+    # for character in text_to_print:
+    #     sys.stdout.write(character)
+    #     sys.stdout.flush()
+    #     time.sleep(0.05)
+    print(text_to_print)
 
 
 def clear_terminal():
