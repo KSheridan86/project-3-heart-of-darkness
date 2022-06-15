@@ -70,8 +70,7 @@ def txt_effect(text_to_print):
     for character in text_to_print:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.05)
-    # print(text_to_print)
+        time.sleep(0.020)
 
 
 def clear_terminal():
@@ -88,7 +87,7 @@ def game_over():
     '''
     Prints a game over graphic and offers options to start again.
     '''
-    time.sleep(1.5)
+    time.sleep(2)
     clear_terminal()
     print(Fore.RED + ascii_art.GAME_OVER)
     choose_your_path('      Would you like to play again? [Y/N]\n',
@@ -129,6 +128,7 @@ def sleep_animation():
     printing them and after a time delay clearing the console and
     printing the next character
     '''
+    time.sleep(1)
     for wake in ascii_art.w_list:
         for i in range(2):
             for zzz in ascii_art.z_list:
@@ -153,8 +153,7 @@ def begin_game():
         Fore.YELLOW + '    Would you like to start the story? (Y/N)\n').lower()
     if answer == 'y':
         clear_terminal()
-        print(Fore.LIGHTYELLOW_EX)
-        print(ascii_art.ACT_1)
+        print(Fore.LIGHTYELLOW_EX + ascii_art.ACT_1)
         print(Style.RESET_ALL)
         txt_effect(intro_text)
         choose_your_path('      Volunteer or Stay with the boat? [V/S]\n',
@@ -175,7 +174,7 @@ def begin_game():
 ###################################################################
 # Start of the story.                                             #
 # Name is required to continue, must be less than 50 characters.  #
-# All characters are accepted.                                    #
+# All characters must be alphabetic                               #
 ###################################################################
 
 
@@ -186,7 +185,7 @@ txt_effect(narrative.INTRO)
 print(Style.RESET_ALL)
 time.sleep(.5)
 name = input('  Please enter your name to continue.......').capitalize()
-while not name or len(name) > 50:
+while not name.isalpha() or len(name) > 50:
     name = input(narrative.NAME_VALIDATION_ERROR).capitalize()
 
 
@@ -277,14 +276,14 @@ def stay_with_boat():
     """
     clear_terminal()
     txt_effect(narrative.STAY_1)
-    time.sleep(.75)
+    time.sleep(2)
     clear_terminal()
     print(Fore.RED + ascii_art.BANG)
     print(Style.RESET_ALL)
     time.sleep(.75)
     clear_terminal()
     txt_effect(narrative.STAY_2)
-    time.sleep(.75)
+    time.sleep(2)
     clear_terminal()
     print(Fore.RED + ascii_art.BANG_2)
     time.sleep(.25)
@@ -312,7 +311,7 @@ def dont_escape():
     """
     clear_terminal()
     txt_effect(narrative.STAY_ON_BOAT)
-    time.sleep(1)
+    time.sleep(2)
     clear_terminal()
     print(Fore.RED + ascii_art.BANG)
     print(Style.RESET_ALL)
@@ -521,11 +520,20 @@ def drink():
                      'n',
                      'y',
                      '      Invalid choice, Another drink?',
-                     pass_args_in,
-                     another_drink,
-                     narrative.LEAVE_BAR_AFTER_DRINK,
-                     visit_office
+                     voluntarily_leave_bar,
+                     another_drink
                      )
+
+
+def voluntarily_leave_bar():
+    """
+    This runs if the user refuses an offer of another drink.
+    Prints a refusal message and calls the next function.
+    """
+    clear_terminal()
+    txt_effect(narrative.LEAVE_BAR_AFTER_DRINK_2)
+    time.sleep(1.5)
+    visit_office()
 
 
 def another_drink():

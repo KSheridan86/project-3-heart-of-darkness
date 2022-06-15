@@ -45,13 +45,13 @@ To deliver a command line game that is interactive, engaging and fun for the use
 -----------------------------
 The theme for this project was largely constrained by the criteria that it had to be a command line interface application.
 I still felt the need to incorporate a little design into the project.
-So I chose a jungle scene to serve as the background image, moved the terminal inside the image, gave the terminal a border with rounded edges, rounded the 'Enter the Jungle?' button and colored it a deep green.
+So I chose a jungle scene to serve as the background image, moved the terminal slightly, gave the terminal a border with rounded edges, rounded the 'Enter the Jungle?' button and colored it a deep green.
 
 During the story/game I also incorporated multiple examples of ascii art. From creating text art for the title page and act markers to images of a boat, a revolver, a fish among others to try and impart a sense of the jungle in the user.
 
 ### Colors
 ----------------
-In keeping with a minimal design i only used two colors, these are: 
+In keeping with a minimal design I only used two colors, these are: 
 
 1. #013220
 2. #2f4f4f
@@ -112,6 +112,8 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 
   Title and intro quote.
   Here the user gets prompted to enter thier name to continue.
+  The contraints put on this input were that it must be shorter than 50 and it must be made up of only letters.
+  
 
 ![Home-page](./docs/Home-Screen.png)
 
@@ -152,7 +154,7 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
   neither are mandatory but both are possible in one 
   pass through the story.
 
-  The games are a basic fishing game and russian roulette a game of chance.
+  These are a fishing game and russian roulette, both are games of chance.
 
 ![russian-roulette](./docs/Russian-roulette.png)
 ![fishing](./docs/Fishing-game.png)
@@ -189,15 +191,15 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [Python](https://www.python.org/) 
-- [a11y](https://color.a11y.com/Contrast/) 
 - [GitPod](https://www.gitpod.io/)
 - [GitHub](https://github.com/)
 - [GitBash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=What%20is%20Git%20Bash%3F,operating%20system%20through%20written%20commands.)
 - [Heroku](https://id.heroku.com/login)
-- [Draw.io](https://drawio-app.com/)
 - [vsCode](https://code.visualstudio.com/)
 - [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
 - [Markdown](https://markdown-guide.readthedocs.io/en/latest/)
+- [Draw.io](https://drawio-app.com/)
+- [a11y](https://color.a11y.com/Contrast/) 
 
 
 -----
@@ -247,7 +249,7 @@ I carried out manual testing to ensure that game flow was correct, everything wa
 
 - Tests carried out: 
   - Home screen - Verify that: 
-    - The Title displays.
+    - The title displays.
     - The intro quote is printed.
     - The user is prompted for their name.
     - The user can enter their name.
@@ -271,7 +273,7 @@ I carried out manual testing to ensure that game flow was correct, everything wa
   - Games - Verify that: 
     - If the user chooses to play a game, the correct game is loaded. 
     - That the game plays as intended without any errors. 
-    - That any variables altered during the game are accessible later for the corrct purposes.
+    - That any variables altered during the game are accessible later for the correct purposes.
 
   - Ascii Art - Verify that:
     - All ascii art is displayed as intended and the color is correct.
@@ -285,13 +287,42 @@ I carried out manual testing to ensure that game flow was correct, everything wa
 
 The Website has been tested on Google Chrome, Microsoft Edge, and Firefox. On all browsers testing was as expected.  
 
+![microsoft-edge](./docs/microsoft-edge.png)
+
+-------------------------------------------
+![firefox](./docs/firefox.png)
+
+-------------------------------------------
+![chrome](./docs/chrome.png)
+
+
 
 ### Validators 
 ----------------------
 
-The three python files were tested using [Pep8 Validation](http://pep8online.com/checkresult). 
+The six python files were tested using [Pep8 Validation](http://pep8online.com/checkresult). 
 
 No errors were found.
+
+![run.py](./docs/run-pep.png)
+
+-----------------------------
+![functions.py](./docs/functions-pep.png)
+
+-----------------------------
+![menu.py](./docs/menu-pep.png)
+
+-----------------------------
+![games.py](./docs/games-pep.png)
+
+-----------------------------
+![narrative.py](./docs/narrative-pep.png)
+
+-----------------------------
+![ascii.py](./docs/ascii-pep.png)
+
+-----------------------------
+
 
 ###  Result: Chrome Lighthouse
 ---------------------------------- 
@@ -415,17 +446,17 @@ The quote on the home page is by Friedrich Nietzsche.
 
 A quick google search for how to clear the terminal gave me this command:
 ```
-    os.system('cls' if os.name == 'nt' else 'clear')
+os.system('cls' if os.name == 'nt' else 'clear')
 ``` 
 I incorporated this into the clear_terminal() function, it is used extensively to control the flow of text in the terminal.
 
 While researching for how to print the text character by character I found this code on stackoverflow:
 
 ```
-    for character in x:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep()
+for character in x:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep()
 ```
 I included this in the txt_effect() function.
 

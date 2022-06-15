@@ -12,7 +12,7 @@ NAME_VALIDATION_ERROR = '''
         Input Invalid
         Your name must be shorter than 50 characters.
         Your name cannot be left empty.
-        You may use numbers or special characters.\n
+        Only letters are accepted.
         Please enter your name to continue.....
 '''
 
@@ -54,7 +54,7 @@ INTRO = """
                 the abyss will gaze back into you."
 """
 
-# Chapter 1
+# Act 1
 
 VOLUNTEER = """
         Into the jungle we went, nothing with us except a tent,
@@ -87,28 +87,28 @@ DONT_FIGHT = '''
         water somewhere.\n
         Before long I was proven right, we were forced to find a path around a
         huge boulder and I noticed a little stream coming down from the top.\n
-                "WAIT! WAIT!!" Cried Sven,
-                "Don't drink that, trust me the water around here is no good.
-                Here have some of this..."\n
+            "WAIT! WAIT!!" Cried Sven,
+            "Don't drink that, trust me the water around here is no good.
+             Here have some of this..."\n
         Sven holds out his hip flask.\n
-                "A friend of mine's homebrew bourbon,
-                good for the heart apparently!"\n
+            "A friend of mine's homebrew bourbon,
+             good for the heart apparently!"\n
 '''
 BOURBON = """
         \n
-        HOLY SHIT! That's strong stuff!\n
+        "HOLY SHIT! That's strong stuff!\n
         Thanks I guess, let's keep moving, we might have to find somewhere
         to camp again tonight, this vegetation is so thick, it really
-        slows us down. But we should make it to town by the morning...\n
+        slows us down. But we should make it to town by the morning..."\n
         -------------------------------------------------------------------\n
         Sven dissapeared in the night without a word. First worried,
         but then later relieved. He was definitely going to cause problems.\n
     """
 
 WATER = """
-        Sven was right,
-        within minutes of drinking the water you begin to feel uneasy.
-        Soon your vomiting uncontrollably and Sven carries on without you...\n
+        Sven was right, within minutes of drinking the water you
+        begin to feel uneasy. Soon your vomiting uncontrollably.
+        Sven carries on without you...\n
     """
 
 STAY_1 = """
@@ -121,7 +121,7 @@ STAY_2 = '''
         Some of the crew had tried to steal some food for themselves and the
         captain had shot one of them.\n
         Things turned bad very quickly...\n
-        The Captain turned the gun on the other crew members but they rushed
+        The captain turned the gun on the other crew members but they rushed
         him all at once...\n
 '''
 STAY_3 = '''
@@ -261,7 +261,9 @@ LEAVE_BAR_AFTER_DRINK = '''
         The offices are only 300 yards away but it feels like your running
         a marathon.
 '''
-
+LEAVE_BAR_AFTER_DRINK_2 = '''
+        "That's plenty for me, thank you."
+'''
 CUT_OFF = '''
         "I think you've had enough now Mr.
         It's not even lunch time."
@@ -317,8 +319,8 @@ TALK_TO_GIRL_4 = '''
 # Act 3
 
 ACT_THREE = '''
-        Back out into the furnace you go. Your clothes now so soaked
-        with sweat it feels like you've been swimming.
+        Back out into the furnace you go. Your clothes now soaked
+        with sweat. It feels like you've been swimming.
 
         The girl in the port office was right,
         Ishmel's boat stands out right away.
@@ -371,8 +373,9 @@ GO_FISH = '''
         You make your self comfortable and Ishmel hands you a bottle of beer.
 
         The sun sparkles on the surface of the river.
-        You can see all manner of birds, fish, insects and tropical plants.
-        After all you've seen the beauty of this place is hard to ignore...
+        You can see all manner of birds, fish, insects and plants.
+        After all you've been through,
+        the beauty of this place is hard to ignore...
 
 '''
 PLANTATION_WITH_ISHMEL = '''
@@ -383,7 +386,7 @@ PLANTATION_WITH_ISHMEL = '''
         Besides we should be in the plantation in no time.\n
         "If you say so sir, be careful and we should see you up at
         the plantation tonight"\n
-        With that the men lept into there boat and dissapeared from sight.\n
+        With that the men lept into their boat and dissapeared from sight.\n
         Before long the plantation drifted into view.
         Great columns of smoke rose from the factories.
         I have no idea how they make rubber but it seems to involve
@@ -432,7 +435,7 @@ OLD_BOAT = '''
 '''
 FIND_BOAT = '''
         The mechanics have directions for where the boat was last seen
-        so it doesn't take long at all to find it.\n
+        so it doesn't take long to find it.\n
         It's only been here a few days and already you can see vines
         reaching down from the jungle canopy, as if they were trying
         to lay claim to what they had found.

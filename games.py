@@ -101,12 +101,19 @@ def fish_game():
     1 in 4 chance it is
     A prime number = a caught fish.
     """
-    functions.clear_terminal()
-    print(Fore.BLUE + ascii_art.CASTING_HOOK)
-    print(Style.RESET_ALL)
-    functions.txt_effect('      Casting line............................')
-    time.sleep(1)
-    narrative.GO_FISHING = True
+    if narrative.FISH_CAUGHT > 0:
+        functions.clear_terminal()
+        functions.txt_effect('      Actually...')
+        time.sleep(.5)
+        functions.sleep()
+    else:
+        functions.clear_terminal()
+        print(Fore.BLUE + ascii_art.CASTING_HOOK)
+        print(Style.RESET_ALL)
+        functions.txt_effect(
+            '      Casting line..............................................')
+        time.sleep(1)
+        narrative.GO_FISHING = True
 
     num = random.randrange(1, 100)
 
@@ -122,9 +129,6 @@ def fish_game():
     answer = cast_line(num)
 
     if answer:
-        functions.clear_terminal()
-        # print(Fore.BLUE + ascii_art.CASTING_HOOK)
-        # time.sleep(2)
         narrative.FISH_CAUGHT += 1
         functions.clear_terminal()
         print(Fore.BLUE + ascii_art.CAUGHT_FISH)
@@ -140,14 +144,10 @@ def fish_game():
                                    )
     else:
         functions.clear_terminal()
-        # print(Fore.BLUE + ascii_art.CASTING_HOOK)
-        # time.sleep(2)
-        functions.clear_terminal()
         print(Fore.LIGHTRED_EX + ascii_art.NO_LUCK)
         time.sleep(1.5)
         functions.clear_terminal()
         print(Fore.BLUE + ascii_art.TRY_AGAIN)
-        # print(f"     You have caught {narrative.FISH_CAUGHT} fish.\n")
         functions.choose_your_path('      Yes or No? (Y/N)\n',
                                    'y',
                                    'n',

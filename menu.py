@@ -29,6 +29,8 @@ def menu():
         str(option)
         if option == '1':
             functions.clear_terminal()
+            print(Fore.LIGHTYELLOW_EX + ascii_art.ACT_1)
+            print(Style.RESET_ALL)
             functions.txt_effect(functions.intro_text)
             functions.choose_your_path(
                 '      Volunteer or Stay with the boat? [V/S]\n',
