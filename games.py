@@ -102,9 +102,11 @@ def fish_game():
     A prime number = a caught fish.
     """
     functions.clear_terminal()
-    print(Fore.BLUE + ascii_art.FISH)
-    narrative.GO_FISHING = True
+    print(Fore.BLUE + ascii_art.CASTING_HOOK)
     print(Style.RESET_ALL)
+    functions.txt_effect('      Casting line............................')
+    time.sleep(1)
+    narrative.GO_FISHING = True
 
     num = random.randrange(1, 100)
 
@@ -120,10 +122,16 @@ def fish_game():
     answer = cast_line(num)
 
     if answer:
+        functions.clear_terminal()
+        # print(Fore.BLUE + ascii_art.CASTING_HOOK)
+        # time.sleep(2)
         narrative.FISH_CAUGHT += 1
+        functions.clear_terminal()
+        print(Fore.BLUE + ascii_art.CAUGHT_FISH)
+        print(Style.RESET_ALL)
         print('     You caught a Fish!!\n')
-        print(f"    You now have {narrative.FISH_CAUGHT} fish in your bucket.")
-        functions.choose_your_path('\n    Keep Fishing? (Y/N)\n',
+        print(f"     You have {narrative.FISH_CAUGHT} fish in your bucket.")
+        functions.choose_your_path('\n     Keep Fishing? (Y/N)\n',
                                    'y',
                                    'n',
                                    '      Invalid choice, Keep Fishing?',
@@ -131,9 +139,16 @@ def fish_game():
                                    functions.sleep
                                    )
     else:
-        print('     No luck, try again?\n')
-        print(f"    You have caught {narrative.FISH_CAUGHT} fish.\n")
-        functions.choose_your_path('      Keep trying? (Y/N)\n',
+        functions.clear_terminal()
+        # print(Fore.BLUE + ascii_art.CASTING_HOOK)
+        # time.sleep(2)
+        functions.clear_terminal()
+        print(Fore.LIGHTRED_EX + ascii_art.NO_LUCK)
+        time.sleep(1.5)
+        functions.clear_terminal()
+        print(Fore.BLUE + ascii_art.TRY_AGAIN)
+        # print(f"     You have caught {narrative.FISH_CAUGHT} fish.\n")
+        functions.choose_your_path('      Yes or No? (Y/N)\n',
                                    'y',
                                    'n',
                                    '      Invalid choice, Keep trying?',

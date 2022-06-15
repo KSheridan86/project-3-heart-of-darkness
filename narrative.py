@@ -87,9 +87,10 @@ DONT_FIGHT = '''
         water somewhere.\n
         Before long I was proven right, we were forced to find a path around a
         huge boulder and I noticed a little stream coming down from the top.\n
-        WAIT! WAIT!! Cried Sven,
-        Don't drink that, trust me the water around here is no good.
-        Here have some of this...Sven holds out his hip flask.\n
+                "WAIT! WAIT!!" Cried Sven,
+                "Don't drink that, trust me the water around here is no good.
+                Here have some of this..."\n
+        Sven holds out his hip flask.\n
                 "A friend of mine's homebrew bourbon,
                 good for the heart apparently!"\n
 '''
@@ -149,7 +150,7 @@ STAY_ON_BOAT = """
 
         But suddenly a giant man (the local fixer as it turns out) has had
         quite enough of being told what to do.
-        In one hand he is holding the captains gun, in the other he's got
+        In one hand he is holding the captain's gun, in the other he's got
         the captain himself, held up by the throat.\n
         He doesn't wait to hear your objection.....
     """
@@ -198,7 +199,7 @@ GAMBLE = '''
         The door is locked behind you and it's only then that you realize,
         there are two other men in the room.
         Both of whom look a lot like the man at the table.
-        Small, wispy, caucasian.
+        Small, wiry, caucasian.
         With eyes that looked like they belonged to a hungry fox not a man.\n
         They were both holding weapons.\n
         "Please Sit..."\n
@@ -369,11 +370,9 @@ GO_FISH = '''
 
         You make your self comfortable and Ishmel hands you a bottle of beer.
 
-        Casting your line the sun sparkles on the surface of the river.
+        The sun sparkles on the surface of the river.
         You can see all manner of birds, fish, insects and tropical plants.
         After all you've seen the beauty of this place is hard to ignore...
-
-        Press Enter to begin fishing...
 
 '''
 PLANTATION_WITH_ISHMEL = '''
@@ -402,7 +401,7 @@ PLANTATION_MECHANICS_1 = '''
         He said he saw one of the steamboats stopped along the river
         in a strange place and it looked to be completely empty
         We began to get worried when you didn't show up and the
-        fishermans news sparked us to come out and investigate.
+        fisherman's news sparked us to come out and investigate.
         Where have you been? Can you tell us what happened to the boat?
         Or the crew for that matter?"
 '''

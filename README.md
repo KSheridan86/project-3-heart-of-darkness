@@ -45,9 +45,18 @@ To deliver a command line game that is interactive, engaging and fun for the use
 -----------------------------
 The theme for this project was largely constrained by the criteria that it had to be a command line interface application.
 I still felt the need to incorporate a little design into the project.
-So i chose a jungle scene to serve as the background image, moved the terminal inside the image, gave the terminal a border with rounded edges, rounded the 'Enter the Jungle?' button above the terminal and colored the button a deep green.
+So I chose a jungle scene to serve as the background image, moved the terminal inside the image, gave the terminal a border with rounded edges, rounded the 'Enter the Jungle?' button and colored it a deep green.
 
 During the story/game I also incorporated multiple examples of ascii art. From creating text art for the title page and act markers to images of a boat, a revolver, a fish among others to try and impart a sense of the jungle in the user.
+
+### Colors
+----------------
+In keeping with a minimal design i only used two colors, these are: 
+
+1. #013220
+2. #2f4f4f
+
+Two deep shades of green to tie in with the jungle imagery.
 
 [Back to the Top](#table-of-contents)
 
@@ -76,7 +85,6 @@ As a user it is important:
 4.  The user is asked if they would like to begin the story.
 5.  Prompts are provided every time the user must make a decision. 
 6.  The user is given the opportunity to quit the story/game with each choice they make. 
-7.  After each act ends the user is asked if they would like to continue.. 
 
 -----
 ## UX 
@@ -93,7 +101,7 @@ I wanted to give the story/game a bit of styling to add to the overall user expe
 
 I created a flow chart using draw.io. The chart gave me an idea of the flow of the game and how the game would progress, by keeping this close to hand as I built the project it was possible to control the flow of the story without losing sight of the goal.
 
-![Flow-of-game](./docs/pp3%20flow%20chart.jpg)
+![Flow-of-game](./docs/pp3%20flow%20chart.png)
 
 
 -------
@@ -140,7 +148,7 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 -------------------
 ### Games
 
-  Two ganes are available for the user to play
+  Two games are available for the user to play,
   neither are mandatory but both are possible in one 
   pass through the story.
 
@@ -167,7 +175,7 @@ I created a flow chart using draw.io. The chart gave me an idea of the flow of t
 --------------------------
   Given the time I would like to rework the story and make it much bigger.
   Extra narrative, more games, possibly a black jack game.
-  I would very much like to have the background image change as the user progress' through
+  I would very much like to have the background image change as the user progresses through
   the story, from jungle scene to boat to saloon to plantation among others.
   This is beyond my abilities at the moment and not needed for this project.
 
@@ -253,7 +261,7 @@ I carried out manual testing to ensure that game flow was correct, everything wa
 
   - Regular narrative and choices - Verify that:
     - The story begins and offers the user the choice to choose their path.
-    - That the story progress' as the user wishes. 
+    - That the story progresses as the user wishes. 
     - That a warning message appears if anything other than the available choices is entered.  
 
   - Menu - Verify that: 
@@ -372,7 +380,7 @@ The website was deployed to heroku by doing the following:
   Cloning this project from GitHub can be done by following these steps: 
 
   - From your list of repositories select the repository you want to deploy.
-  - Click on the code tabe. 
+  - Click on the code tab. 
   - Click on the clipboard icon to copy the URL.  
   - Open Git Bash in your IDE. 
   - Change the current working directory to the location you want to place the clone. 
@@ -405,7 +413,23 @@ I sourced ascii_art from three places.
 
 The quote on the home page is by Friedrich Nietzsche.
 
-All of the code base and the story is my work.
+A quick google search for how to clear the terminal gave me this command:
+```
+    os.system('cls' if os.name == 'nt' else 'clear')
+``` 
+I incorporated this into the clear_terminal() function, it is used extensively to control the flow of text in the terminal.
+
+While researching for how to print the text character by character I found this code on stackoverflow:
+
+```
+    for character in x:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep()
+```
+I included this in the txt_effect() function.
+
+All of the rest of the code base and the story is my work.
 
 
 

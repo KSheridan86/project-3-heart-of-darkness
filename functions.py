@@ -5,7 +5,6 @@ You must navigate your way up the Congo river at the height of the
 Belgian colonial conquest.
 """
 import time
-# import random
 import sys
 import os
 from colorama import init
@@ -15,7 +14,6 @@ import ascii_art
 from menu import menu
 from games import russian_roulette, fish_game
 init()
-
 
 # Functions used throughout the story.
 ###############################################################################
@@ -174,11 +172,12 @@ def begin_game():
         print("This is not a valid selection....Try again.")
         begin_game()
 
+###################################################################
+# Start of the story.                                             #
+# Name is required to continue, must be less than 50 characters.  #
+# All characters are accepted.                                    #
+###################################################################
 
-# Start of the story.
-# Name is required to continue, must be less than 50 characters.
-# All characters are accepted.
-###############################################################################
 
 print(Fore.LIGHTYELLOW_EX)
 print(ascii_art.TITLE)
@@ -247,7 +246,6 @@ def dont_fight_sven():
                      narrative.WATER,
                      game_over
                      )
-
 
 # Act 1
 # Fork 1.1
@@ -336,7 +334,6 @@ def escape_boat():
                      act_two
                      )
 
-
 ##############################################################################
 # Act 2
 
@@ -417,7 +414,6 @@ def enter_office():
                      make_report,
                      make_report
                      )
-
 
 # Act 2
 # Fork 2
@@ -559,7 +555,6 @@ def another_drink():
                          visit_office
                          )
 
-
 ##############################################################################
 # Act 3
 # First section of act 3 contains the fishing game.
@@ -692,7 +687,6 @@ def stay_with_ishmel():
                      arrive_plantation
                      )
 
-
 # Fork 2
 
 
@@ -783,7 +777,6 @@ def wait_on_mechanics():
                      decide_to_leave,
                      arrive_plantation_mechanics
                      )
-
 
 # Fork  2.1
 
