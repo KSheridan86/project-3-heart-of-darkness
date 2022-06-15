@@ -101,7 +101,7 @@ I wanted to give the story/game a bit of styling to add to the overall user expe
 
 I created a flow chart using draw.io. The chart gave me an idea of the flow of the game and how the game would progress, by keeping this close to hand as I built the project it was possible to control the flow of the story without losing sight of the goal.
 
-![Flow-of-game](./docs/pp3%20flow%20chart.png)
+![Flow-of-game](./docs/pp3-flow-chart.png)
 
 
 -------
