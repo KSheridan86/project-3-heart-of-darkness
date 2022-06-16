@@ -101,7 +101,7 @@ def fish_game():
     1 in 4 chance it is
     A prime number = a caught fish.
     """
-    if narrative.FISH_CAUGHT > 0:
+    if narrative.FISH_CAUGHT > 5:
         functions.clear_terminal()
         functions.txt_effect('      Actually...')
         time.sleep(.5)

@@ -1,9 +1,7 @@
-"""
-This is a choose your own adventure game, based loosely on the theme's of
-the book The Heart of Darkness by Joseph Conrad.
-You must navigate your way up the Congo river at the height of the
-Belgian colonial conquest.
-"""
+'''
+This module holds all of the functions needed to run the game.
+'''
+
 import time
 import sys
 import os
